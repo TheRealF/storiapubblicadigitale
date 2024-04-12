@@ -18,7 +18,7 @@ return [
             'square' => ['constraint' => 200],
         ],
         'thumbnailer_options' => [
-            'imagemagick_dir' => "usr/lib64/php/modules",
+            'imagemagick_dir' => "/usr/local/bin/magick",
         ],
     ],
     'translator' => [

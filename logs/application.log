@@ -1,0 +1,54 @@
+2024-04-12T16:34:05+00:00 ERR (3):
+2024-04-12T16:34:05+00:00 ERR (3): Command "command -v 'convert'" failed with status code 1.
+2024-04-12T16:34:05+00:00 ERR (3): Omeka\File\Exception\InvalidThumbnailerException: ImageMagick error: cannot determine path to ImageMagick command. in /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/Thumbnailer/ImageMagick.php:117
+Stack trace:
+#0 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/Thumbnailer/ImageMagick.php(41): Omeka\File\Thumbnailer\ImageMagick->setConvertPath()
+#1 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/TempFile.php(264): Omeka\File\Thumbnailer\ImageMagick->setOptions()
+#2 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/TempFile.php(439): Omeka\File\TempFile->storeThumbnails()
+#3 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Media/Ingester/Upload.php(62): Omeka\File\TempFile->mediaIngestFile()
+#4 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/MediaAdapter.php(169): Omeka\Media\Ingester\Upload->ingest()
+#5 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(635): Omeka\Api\Adapter\MediaAdapter->hydrate()
+#6 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/ItemAdapter.php(298): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity()
+#7 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(635): Omeka\Api\Adapter\ItemAdapter->hydrate()
+#8 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(445): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity()
+#9 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Manager.php(233): Omeka\Api\Adapter\AbstractEntityAdapter->update()
+#10 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Manager.php(136): Omeka\Api\Manager->execute()
+#11 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Mvc/Controller/Plugin/Api.php(152): Omeka\Api\Manager->update()
+#12 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Controller/Admin/ItemController.php(254): Omeka\Mvc\Controller\Plugin\Api->update()
+#13 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Controller/AbstractActionController.php(71): Omeka\Controller\Admin\ItemController->editAction()
+#14 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch()
+#15 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners()
+#16 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Controller/AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil()
+#17 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch()
+#18 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch()
+#19 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners()
+#20 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil()
+#21 /home/u223577557/domains/binatomy.com/public_html/kaloefede/index.php(21): Laminas\Mvc\Application->run()
+#22 {main}
+2024-04-12T16:34:16+00:00 ERR (3):
+2024-04-12T16:34:16+00:00 ERR (3): Command "command -v 'convert'" failed with status code 1.
+2024-04-12T16:34:16+00:00 ERR (3): Omeka\File\Exception\InvalidThumbnailerException: ImageMagick error: cannot determine path to ImageMagick command. in /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/Thumbnailer/ImageMagick.php:117
+Stack trace:
+#0 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/Thumbnailer/ImageMagick.php(41): Omeka\File\Thumbnailer\ImageMagick->setConvertPath()
+#1 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/TempFile.php(264): Omeka\File\Thumbnailer\ImageMagick->setOptions()
+#2 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/File/TempFile.php(439): Omeka\File\TempFile->storeThumbnails()
+#3 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Media/Ingester/Upload.php(62): Omeka\File\TempFile->mediaIngestFile()
+#4 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/MediaAdapter.php(169): Omeka\Media\Ingester\Upload->ingest()
+#5 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(635): Omeka\Api\Adapter\MediaAdapter->hydrate()
+#6 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/ItemAdapter.php(298): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity()
+#7 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(635): Omeka\Api\Adapter\ItemAdapter->hydrate()
+#8 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Adapter/AbstractEntityAdapter.php(445): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity()
+#9 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Manager.php(233): Omeka\Api\Adapter\AbstractEntityAdapter->update()
+#10 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Api/Manager.php(136): Omeka\Api\Manager->execute()
+#11 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Mvc/Controller/Plugin/Api.php(152): Omeka\Api\Manager->update()
+#12 /home/u223577557/domains/binatomy.com/public_html/kaloefede/application/src/Controller/Admin/ItemController.php(254): Omeka\Mvc\Controller\Plugin\Api->update()
+#13 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Controller/AbstractActionController.php(71): Omeka\Controller\Admin\ItemController->editAction()
+#14 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch()
+#15 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners()
+#16 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Controller/AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil()
+#17 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch()
+#18 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch()
+#19 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-eventmanager/src/EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners()
+#20 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil()
+#21 /home/u223577557/domains/binatomy.com/public_html/kaloefede/index.php(21): Laminas\Mvc\Application->run()
+#22 {main}

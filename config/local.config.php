@@ -18,11 +18,11 @@ return [
             'square' => ['constraint' => 200],
         ],
         'thumbnailer_options' => [
-            'imagemagick_dir' => null,
+            'imagemagick_dir' => "/opt/alt/php81/usr/lib64/php/modules",
         ],
     ],
     'translator' => [
-        'locale' => 'en_US',
+        'locale' => 'it_IT',
     ],
     'service_manager' => [
         'aliases' => [

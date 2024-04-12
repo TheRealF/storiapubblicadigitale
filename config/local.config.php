@@ -18,7 +18,7 @@ return [
             'square' => ['constraint' => 200],
         ],
         'thumbnailer_options' => [
-            'imagemagick_dir' => "/usr/local/bin/magick",
+            'imagemagick_dir' => "/opt/rh-magick/bin",
         ],
     ],
     'translator' => [

@@ -52,3 +52,19 @@ Stack trace:
 #20 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil()
 #21 /home/u223577557/domains/binatomy.com/public_html/kaloefede/index.php(21): Laminas\Mvc\Application->run()
 #22 {main}
+2024-04-13T13:16:08+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
+Stack trace:
+#0 C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('federicoboggia9...', '=?UTF-8?Q?Ripri...', 'Greetings, TheR...', 'Date: Sat, 13 A...', NULL)
+#1 C:\xampp2\htdocs\application\src\Stdlib\Mailer.php(86): Laminas\Mail\Transport\Sendmail->send(Object(Laminas\Mail\Message))
+#2 C:\xampp2\htdocs\application\src\Stdlib\Mailer.php(197): Omeka\Stdlib\Mailer->send(Object(Laminas\Mail\Message))
+#3 C:\xampp2\htdocs\application\src\Controller\LoginController.php(166): Omeka\Stdlib\Mailer->sendResetPassword(Object(Omeka\Entity\User))
+#4 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\LoginController->forgotPasswordAction()
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#11 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#12 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#13 {main}

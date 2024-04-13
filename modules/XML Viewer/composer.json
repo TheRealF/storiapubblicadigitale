@@ -1,0 +1,23 @@
+{
+    "name": "daniel-km/omeka-s-module-xmlviewer",
+    "description": "XML viewer (module for Omeka S)",
+    "type": "library",
+    "license": "CECILL-2.1",
+    "authors": [
+        {
+            "name": "Daniel Berthereau",
+            "email": "Daniel.packagist@Berthereau.net"
+        }
+    ],
+    "homepage": "https://gitlab.com/Daniel-KM/Omeka-S-module-XmlViewer",
+    "support": {
+        "issues": "https://gitlab.com/Daniel-KM/Omeka-S-module-XmlViewer/-/issues",
+        "forum": "https://forum.omeka.org/"
+    },
+    "keywords": [
+        "Omeka S",
+        "Omeka S module",
+        "viewer",
+        "XML"
+    ]
+}

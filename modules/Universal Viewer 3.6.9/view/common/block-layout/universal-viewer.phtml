@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \UniversalViewer\Site\BlockLayout\UniversalViewer $block
+ * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
+ */
+
+$resources = [];
+foreach ($attachments as $attachment) {
+    $item = $attachment->item();
+    if ($item) {
+        $resources[] = $item;
+    }
+}
+// Display the viewer with the specified resources.
+echo $this->universalViewer(count($resources) === 1 ? reset($resources) : $resources);

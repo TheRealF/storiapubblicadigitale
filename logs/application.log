@@ -584,3 +584,108 @@ Stack trace:
 #21 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
 #22 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
 #23 {main}
+2024-04-13T14:31:00+00:00 ERR (3): Error: Failed opening required 'C:\xampp2\htdocs\modules/Common/TraitModule.php' (include_path='C:\xampp2\php\PEAR') in C:\xampp2\htdocs\modules\BulkEdit\Module.php:6
+Stack trace:
+#0 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(258): require_once()
+#1 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(210): Laminas\Loader\ModuleAutoloader->loadModuleFromDir('C:\\xampp2\\htdoc...', 'BulkEdit\\Module')
+#2 C:\xampp2\htdocs\application\src\Module\Manager.php(354): Laminas\Loader\ModuleAutoloader->autoload('BulkEdit\\Module')
+#3 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#4 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#10 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#11 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#12 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#13 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#14 {main}
+2024-04-13T14:38:30+00:00 ERR (3): Error: Failed opening required 'C:\xampp2\htdocs\modules/Common/TraitModule.php' (include_path='C:\xampp2\php\PEAR') in C:\xampp2\htdocs\modules\BulkEdit\Module.php:6
+Stack trace:
+#0 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(258): require_once()
+#1 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(210): Laminas\Loader\ModuleAutoloader->loadModuleFromDir('C:\\xampp2\\htdoc...', 'BulkEdit\\Module')
+#2 C:\xampp2\htdocs\application\src\Module\Manager.php(354): Laminas\Loader\ModuleAutoloader->autoload('BulkEdit\\Module')
+#3 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#4 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#10 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#11 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#12 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#13 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#14 {main}
+2024-04-13T14:38:51+00:00 ERR (3): Error: Class "DataTypeRdf-3.4.9\Module" not found in C:\xampp2\htdocs\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T14:39:18+00:00 ERR (3): Omeka\Mvc\Exception\NotFoundException in C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php:114
+Stack trace:
+#0 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#1 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#2 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#3 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#9 {main}
+2024-04-13T14:39:24+00:00 ERR (3): Error: Failed opening required 'C:\xampp2\htdocs\modules/Common/TraitModule.php' (include_path='C:\xampp2\php\PEAR') in C:\xampp2\htdocs\modules\DataTypeRdf\Module.php:37
+Stack trace:
+#0 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(258): require_once()
+#1 C:\xampp2\htdocs\vendor\laminas\laminas-loader\src\ModuleAutoloader.php(210): Laminas\Loader\ModuleAutoloader->loadModuleFromDir('C:\\xampp2\\htdoc...', 'DataTypeRdf\\Mod...')
+#2 C:\xampp2\htdocs\application\src\Module\Manager.php(354): Laminas\Loader\ModuleAutoloader->autoload('DataTypeRdf\\Mod...')
+#3 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#4 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#10 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#11 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#12 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#13 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#14 {main}
+2024-04-13T14:43:25+00:00 ERR (3): Error: Class "Universal Viewer 3.6.9\Module" not found in C:\xampp2\htdocs\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T14:43:29+00:00 ERR (3): Error: Class "XML Viewer\Module" not found in C:\xampp2\htdocs\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp2\htdocs\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp2\htdocs\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}

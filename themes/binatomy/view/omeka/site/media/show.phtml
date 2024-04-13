@@ -1,0 +1,37 @@
+<?php
+$translate = $this->plugin('translate');
+$item = $media->item();
+$this->headLink()->prependStylesheet($this->assetUrl('css/resource-page-blocks.css', 'Omeka'));
+$fullWidthContent = $this->resourcePageBlocks($media, 'full_width_main');
+$mainWidthSidebarContent = $this->resourcePageBlocks($media);
+$sidebarContent = $this->resourcePageBlocks($media, 'right');
+$this->htmlElement('body')->appendAttribute('class', 'media resource show'); 
+?>
+
+<?php $this->trigger('view.show.before'); ?>
+
+<?php echo $this->pageTitle($media->displayTitle(), 2); ?>
+<h3><?php echo $translate('Media'); ?></h3>
+<p class="media-parent-item">
+    <?php echo sprintf($translate('Part of %s'), $item->link($item->displayTitle())); ?>
+</p>
+
+<?php if ($fullWidthContent->hasBlocks()): ?>
+<div class="full-width">
+    <?php echo $fullWidthContent->getBlocks(); ?>
+</div>
+<?php endif; ?>
+
+<?php if ($mainWidthSidebarContent->hasBlocks()): ?>
+<div class="with-sidebar">
+    <?php echo $this->resourcePageBlocks($media)->getBlocks(); ?>
+</div>
+<?php endif; ?>
+
+<?php if ($sidebarContent->hasBlocks()): ?>
+<div class="sidebar right">
+    <?php echo $this->resourcePageBlocks($media, 'right')->getBlocks(); ?>
+</div>
+<?php endif; ?>
+
+<?php $this->trigger('view.show.after'); ?>

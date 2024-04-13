@@ -18,7 +18,7 @@ return [
             'square' => ['constraint' => 200],
         ],
         'thumbnailer_options' => [
-            'imagemagick_dir' => "/opt/rh-magick/bin",
+            'imagemagick_dir' => null,
         ],
     ],
     'translator' => [
@@ -27,7 +27,7 @@ return [
     'service_manager' => [
         'aliases' => [
             'Omeka\File\Store' => 'Omeka\File\Store\Local',
-            'Omeka\File\Thumbnailer' => 'Omeka\File\Thumbnailer\ImageMagick',
+            'Omeka\File\Thumbnailer' => 'Omeka\File\Thumbnailer\Gd',
         ],
     ],
 ];

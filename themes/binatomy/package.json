@@ -1,0 +1,36 @@
+{
+  "name": "cozy",
+  "version": "1.6.1",
+  "description": "A theme for Omeka S.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omeka-s-themes/cozy.git"
+  },
+  "keywords": [
+    "omeka-s",
+    "theme"
+  ],
+  "author": "RRCHNM",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/omeka-s-themes/cozy/issues"
+  },
+  "homepage": "https://github.com/omeka-s-themes/cozy#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.2.1",
+    "set-value": ">=4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "susy": "^3.0.7"
+  },
+  "browserslist": [
+    "> 5%",
+    "> 1% in US"
+  ]
+}

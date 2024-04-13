@@ -52,6 +52,7 @@ Stack trace:
 #20 /home/u223577557/domains/binatomy.com/public_html/kaloefede/vendor/laminas/laminas-mvc/src/Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil()
 #21 /home/u223577557/domains/binatomy.com/public_html/kaloefede/index.php(21): Laminas\Mvc\Application->run()
 #22 {main}
+<<<<<<< Updated upstream
 2024-04-13T13:16:08+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
 Stack trace:
 #0 C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('federicoboggia9...', '=?UTF-8?Q?Ripri...', 'Greetings, TheR...', 'Date: Sat, 13 A...', NULL)
@@ -67,7 +68,24 @@ Stack trace:
 #10 C:\xampp2\htdocs\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
 #11 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
 #12 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
+=======
+2024-04-13T13:18:01+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
+Stack trace:
+#0 C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('kalo@binatomy.c...', '=?UTF-8?Q?Ripri...', 'Greetings, Kalo...', 'Date: Sat, 13 A...', NULL)
+#1 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(86): Laminas\Mail\Transport\Sendmail->send(Object(Laminas\Mail\Message))
+#2 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(197): Omeka\Stdlib\Mailer->send(Object(Laminas\Mail\Message))
+#3 C:\xampp\htdocs\spd\application\src\Controller\LoginController.php(166): Omeka\Stdlib\Mailer->sendResetPassword(Object(Omeka\Entity\User))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\LoginController->forgotPasswordAction()
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#11 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#12 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
 #13 {main}
+<<<<<<< HEAD
 2024-04-13T13:27:34+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
 Stack trace:
 #0 C:\xampp2\htdocs\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('kalo@binatomy.c...', '=?UTF-8?Q?Attiv...', 'Greetings!\r\n\r\nA...', 'Date: Sat, 13 A...', NULL)
@@ -689,3 +707,155 @@ Stack trace:
 #9 C:\xampp2\htdocs\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
 #10 C:\xampp2\htdocs\index.php(21): Laminas\Mvc\Application->run()
 #11 {main}
+=======
+2024-04-13T13:18:02+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
+Stack trace:
+#0 C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('kalo@binatomy.c...', '=?UTF-8?Q?Ripri...', 'Greetings, Kalo...', 'Date: Sat, 13 A...', NULL)
+#1 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(86): Laminas\Mail\Transport\Sendmail->send(Object(Laminas\Mail\Message))
+#2 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(197): Omeka\Stdlib\Mailer->send(Object(Laminas\Mail\Message))
+#3 C:\xampp\htdocs\spd\application\src\Controller\LoginController.php(166): Omeka\Stdlib\Mailer->sendResetPassword(Object(Omeka\Entity\User))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\LoginController->forgotPasswordAction()
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#11 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#12 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+>>>>>>> Stashed changes
+#13 {main}
+2024-04-13T13:23:56+00:00 ERR (3): Laminas\Mail\Transport\Exception\RuntimeException: Unable to send mail: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php:298
+Stack trace:
+#0 C:\xampp\htdocs\spd\vendor\laminas\laminas-mail\src\Transport\Sendmail.php(130): Laminas\Mail\Transport\Sendmail->mailHandler('kalo@binatomy.c...', '=?UTF-8?Q?Ripri...', 'Greetings, Kalo...', 'Date: Sat, 13 A...', NULL)
+#1 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(86): Laminas\Mail\Transport\Sendmail->send(Object(Laminas\Mail\Message))
+#2 C:\xampp\htdocs\spd\application\src\Stdlib\Mailer.php(197): Omeka\Stdlib\Mailer->send(Object(Laminas\Mail\Message))
+#3 C:\xampp\htdocs\spd\application\src\Controller\LoginController.php(166): Omeka\Stdlib\Mailer->sendResetPassword(Object(Omeka\Entity\User))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\LoginController->forgotPasswordAction()
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#11 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#12 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#13 {main}
+2024-04-13T13:40:48+00:00 ERR (3): Error: Class "Omeka-S-module-XmlViewer-master\Module" not found in C:\xampp\htdocs\spd\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp\htdocs\spd\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T13:41:03+00:00 ERR (3): Error: Class "Omeka-S-module-ModelViewer-master\Module" not found in C:\xampp\htdocs\spd\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp\htdocs\spd\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T13:43:50+00:00 ERR (3): Error: Class "Omeka-S-module-BulkEdit-master\Module" not found in C:\xampp\htdocs\spd\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp\htdocs\spd\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T13:44:37+00:00 ERR (3): Omeka\File\Exception\InvalidThumbnailerException: ImageMagick error: invalid ImageMagick command. in C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php:112
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php(41): Omeka\File\Thumbnailer\ImageMagick->setConvertPath('/opt/rh-magick/...')
+#1 C:\xampp\htdocs\spd\application\src\File\TempFile.php(264): Omeka\File\Thumbnailer\ImageMagick->setOptions(Array)
+#2 C:\xampp\htdocs\spd\application\src\File\TempFile.php(439): Omeka\File\TempFile->storeThumbnails()
+#3 C:\xampp\htdocs\spd\application\src\Media\Ingester\Upload.php(62): Omeka\File\TempFile->mediaIngestFile(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#4 C:\xampp\htdocs\spd\application\src\Api\Adapter\MediaAdapter.php(169): Omeka\Media\Ingester\Upload->ingest(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#5 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\MediaAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#6 C:\xampp\htdocs\spd\application\src\Api\Adapter\ItemAdapter.php(298): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#7 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\ItemAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#8 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(445): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#9 C:\xampp\htdocs\spd\application\src\Api\Manager.php(233): Omeka\Api\Adapter\AbstractEntityAdapter->update(Object(Omeka\Api\Request))
+#10 C:\xampp\htdocs\spd\application\src\Api\Manager.php(136): Omeka\Api\Manager->execute(Object(Omeka\Api\Request))
+#11 C:\xampp\htdocs\spd\application\src\Mvc\Controller\Plugin\Api.php(152): Omeka\Api\Manager->update('items', '2', Array, Array, Array)
+#12 C:\xampp\htdocs\spd\application\src\Controller\Admin\ItemController.php(254): Omeka\Mvc\Controller\Plugin\Api->update('items', '2', Array, Array)
+#13 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ItemController->editAction()
+#14 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#15 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#16 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#17 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#18 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#19 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#20 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#21 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#22 {main}
+2024-04-13T13:45:17+00:00 ERR (3): Omeka\File\Exception\InvalidThumbnailerException: ImageMagick error: invalid ImageMagick command. in C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php:112
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php(41): Omeka\File\Thumbnailer\ImageMagick->setConvertPath('/opt/rh-magick/...')
+#1 C:\xampp\htdocs\spd\application\src\File\TempFile.php(264): Omeka\File\Thumbnailer\ImageMagick->setOptions(Array)
+#2 C:\xampp\htdocs\spd\application\src\File\TempFile.php(439): Omeka\File\TempFile->storeThumbnails()
+#3 C:\xampp\htdocs\spd\application\src\Media\Ingester\Upload.php(62): Omeka\File\TempFile->mediaIngestFile(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#4 C:\xampp\htdocs\spd\application\src\Api\Adapter\MediaAdapter.php(169): Omeka\Media\Ingester\Upload->ingest(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#5 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\MediaAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#6 C:\xampp\htdocs\spd\application\src\Api\Adapter\ItemAdapter.php(298): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#7 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\ItemAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#8 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(445): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#9 C:\xampp\htdocs\spd\application\src\Api\Manager.php(233): Omeka\Api\Adapter\AbstractEntityAdapter->update(Object(Omeka\Api\Request))
+#10 C:\xampp\htdocs\spd\application\src\Api\Manager.php(136): Omeka\Api\Manager->execute(Object(Omeka\Api\Request))
+#11 C:\xampp\htdocs\spd\application\src\Mvc\Controller\Plugin\Api.php(152): Omeka\Api\Manager->update('items', '2', Array, Array, Array)
+#12 C:\xampp\htdocs\spd\application\src\Controller\Admin\ItemController.php(254): Omeka\Mvc\Controller\Plugin\Api->update('items', '2', Array, Array)
+#13 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ItemController->editAction()
+#14 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#15 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#16 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#17 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#18 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#19 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#20 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#21 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#22 {main}
+2024-04-13T14:00:56+00:00 ERR (3): Omeka\File\Exception\InvalidThumbnailerException: ImageMagick error: invalid ImageMagick command. in C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php:112
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\File\Thumbnailer\ImageMagick.php(41): Omeka\File\Thumbnailer\ImageMagick->setConvertPath('/opt/rh-magick/...')
+#1 C:\xampp\htdocs\spd\application\src\File\TempFile.php(264): Omeka\File\Thumbnailer\ImageMagick->setOptions(Array)
+#2 C:\xampp\htdocs\spd\application\src\File\TempFile.php(439): Omeka\File\TempFile->storeThumbnails()
+#3 C:\xampp\htdocs\spd\application\src\Media\Ingester\Upload.php(62): Omeka\File\TempFile->mediaIngestFile(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#4 C:\xampp\htdocs\spd\application\src\Api\Adapter\MediaAdapter.php(169): Omeka\Media\Ingester\Upload->ingest(Object(Omeka\Entity\Media), Object(Omeka\Api\Request), Object(Omeka\Stdlib\ErrorStore))
+#5 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\MediaAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#6 C:\xampp\htdocs\spd\application\src\Api\Adapter\ItemAdapter.php(298): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Media), Object(Omeka\Stdlib\ErrorStore))
+#7 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(635): Omeka\Api\Adapter\ItemAdapter->hydrate(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#8 C:\xampp\htdocs\spd\application\src\Api\Adapter\AbstractEntityAdapter.php(445): Omeka\Api\Adapter\AbstractEntityAdapter->hydrateEntity(Object(Omeka\Api\Request), Object(Omeka\Entity\Item), Object(Omeka\Stdlib\ErrorStore))
+#9 C:\xampp\htdocs\spd\application\src\Api\Manager.php(233): Omeka\Api\Adapter\AbstractEntityAdapter->update(Object(Omeka\Api\Request))
+#10 C:\xampp\htdocs\spd\application\src\Api\Manager.php(136): Omeka\Api\Manager->execute(Object(Omeka\Api\Request))
+#11 C:\xampp\htdocs\spd\application\src\Mvc\Controller\Plugin\Api.php(152): Omeka\Api\Manager->update('items', '2', Array, Array, Array)
+#12 C:\xampp\htdocs\spd\application\src\Controller\Admin\ItemController.php(254): Omeka\Mvc\Controller\Plugin\Api->update('items', '2', Array, Array)
+#13 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ItemController->editAction()
+#14 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#15 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#16 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#17 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#18 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#19 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#20 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#21 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#22 {main}
+>>>>>>> 98bce81f67fe4bdc856ca39322b65d3c56d2af0b

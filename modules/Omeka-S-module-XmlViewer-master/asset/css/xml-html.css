@@ -1,0 +1,18 @@
+/* Basic css to display a xml as html. */
+.tag .name {
+    font-family: monospace;
+    color: purple;
+}
+.tag .attr .name {
+    font-family: monospace;
+    color: chocolate;
+}
+.tag .attr .value {
+    color: blue;
+}
+.tag .tag {
+    margin-left: 1em;
+}
+.tag.comment {
+    color: gray;
+}

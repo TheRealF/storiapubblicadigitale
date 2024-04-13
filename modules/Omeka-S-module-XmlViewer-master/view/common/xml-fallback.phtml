@@ -1,0 +1,14 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \Omeka\Api\Representation\MediaRepresentation $resource
+ * @var \Omeka\Api\Representation\MediaRepresentation $media
+ * @var array $options
+ *
+ * @see \Omeka\Media\FileRenderer\FallbackRenderer::render()
+ */
+
+// Default output when the xml specific media-type is not managed.
+?>
+
+<?= $this->hyperlink($media->filename(), $media->originalUrl(), ['type' => $media->mediaType(), 'target' => '_blank']) ?>

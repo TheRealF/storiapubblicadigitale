@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-03 00:00+0000\n"
+"PO-Revision-Date: 2022-01-03 00:00+0000\n"
+"Last-Translator: Daniel Berthereau <Daniel.fr@Berthereau.net>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: Module.php:58
+#, php-format
+msgid "The library \"%s\" should be installed."
+msgstr "La bibliothèque \"%s\" doit être installée."
+
+#: Module.php:61 Module.php:67
+msgid "See module’s installation documentation."
+msgstr "Consulter la documentation d’installation du module."
+
+#: src/Generic/AbstractModule.php:66
+#, php-format
+msgid "This module requires the module \"%s\"."
+msgstr "Ce module requiert le module \"%s\"."
+
+#: src/Generic/AbstractModule.php:73
+#, php-format
+msgid "This module requires modules \"%s\"."
+msgstr "Ce module requiert les modules \"%s\"."
+
+#: src/Generic/AbstractModule.php:80
+msgid "This module has resources that cannot be installed."
+msgstr "Ce module a des ressource qui ne peuvent pas être installées."
+
+#: src/Generic/AbstractModule.php:725
+#, php-format
+msgid ""
+"The module \"%s\" was automatically deactivated because the dependencies are "
+"unavailable."
+msgstr ""
+"Le module \"%s\" a été automatiquement désactivé car ses dépendances ne sont "
+"plus disponibles."
+
+#: Module.php:66
+msgid ""
+"If your json and xml files are not recognized as model, install modules Bulk "
+"Edit and/or Xml Viewer."
+msgstr ""
+"Si vos fichiers json et xml ne sont pas reconnus en tant que modèles, "
+"installez les modules Bulk Edit et/ou Xml Viewer."
+
+#: src/Form/SettingsFieldset.php:11
+msgid "Model Viewer"
+msgstr "Visionneuse de modèles"
+
+#: src/Form/SettingsFieldset.php:20
+msgid "Media property for specific config"
+msgstr "Propriété du média pour la configuration spécifique"
+
+#: src/Form/SettingsFieldset.php:21
+msgid "It is recommended to hide it on public display."
+msgstr "Il est recommandé de cacher cette valeur dans l’affichage public."
+
+#: src/Form/SettingsFieldset.php:32
+msgid "Default scene config (json)"
+msgstr "Configuration de la scène par défaut (json)"
+
+#: src/View/Helper/PrepareModelViewer.php:37
+msgid "[Model viewer]: Main config is not a valid json."
+msgstr "[Model viewer] : la configuration principale n’est pas un json valide."
+
+#: src/View/Helper/PrepareModelViewer.php:140
+#, php-format
+msgid "[Model viewer]: Specific config for media %d is not a valid json."
+msgstr ""
+"[Model viewer]: La configuration spécifique du média %d n’est pas un json "
+"valide."

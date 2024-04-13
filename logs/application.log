@@ -118,3 +118,31 @@ Stack trace:
 #11 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
 #12 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
 #13 {main}
+2024-04-13T13:40:48+00:00 ERR (3): Error: Class "Omeka-S-module-XmlViewer-master\Module" not found in C:\xampp\htdocs\spd\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp\htdocs\spd\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}
+2024-04-13T13:41:03+00:00 ERR (3): Error: Class "Omeka-S-module-ModelViewer-master\Module" not found in C:\xampp\htdocs\spd\application\src\Module\Manager.php:354
+Stack trace:
+#0 C:\xampp\htdocs\spd\application\src\Module\Manager.php(225): Omeka\Module\Manager->getModuleObject(Object(Omeka\Module\Module))
+#1 C:\xampp\htdocs\spd\application\src\Controller\Admin\ModuleController.php(117): Omeka\Module\Manager->install(Object(Omeka\Module\Module))
+#2 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractActionController.php(71): Omeka\Controller\Admin\ModuleController->installAction()
+#3 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\Controller\AbstractActionController->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#4 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#5 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Controller\AbstractController.php(97): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#6 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\DispatchListener.php(132): Laminas\Mvc\Controller\AbstractController->dispatch(Object(Laminas\Http\PhpEnvironment\Request), Object(Laminas\Http\PhpEnvironment\Response))
+#7 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(319): Laminas\Mvc\DispatchListener->onDispatch(Object(Laminas\Mvc\MvcEvent))
+#8 C:\xampp\htdocs\spd\vendor\laminas\laminas-eventmanager\src\EventManager.php(179): Laminas\EventManager\EventManager->triggerListeners(Object(Laminas\Mvc\MvcEvent), Object(Closure))
+#9 C:\xampp\htdocs\spd\vendor\laminas\laminas-mvc\src\Application.php(325): Laminas\EventManager\EventManager->triggerEventUntil(Object(Closure), Object(Laminas\Mvc\MvcEvent))
+#10 C:\xampp\htdocs\spd\index.php(21): Laminas\Mvc\Application->run()
+#11 {main}

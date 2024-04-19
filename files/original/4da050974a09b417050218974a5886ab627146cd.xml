@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style_conversion.xsl"?>
+
+<!DOCTYPE TEI SYSTEM "tei_all.dtd" >
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Vincenzo Bellini a Ottavio Tasca, in Como, 24 agosto 1830</title>
+        <author ref="#VB">Vincenzo Bellini</author>
+        <respStmt>
+          <resp>Transcription by</resp>
+          <name xml:id="GS">Graziella Seminara</name>
+        </respStmt>
+        <respStmt>
+          <resp>Encoding by</resp>
+          <name xml:id="AMDG">Angelo Mario Del Grosso</name>
+          <name xml:id="EC">Erica Capizzi</name>
+          <name xml:id="DS">Daria Spampinato</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>Digital edition
+          <date when="2021-02">Febbraio 2021</date>
+        </edition>
+        <respStmt>
+          <resp>Digital edition project coordinated by</resp>
+          <name ref="#AMDG">Angelo Mario Del Grosso</name>
+          <name ref="#DS">Daria Spampinato</name>
+        </respStmt>
+        <respStmt>
+          <resp>Encoding by</resp>
+          <name xml:id="FBE">Francesco Bertoli</name>
+          <name xml:id="FBO">Federico Boggia</name>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <publisher>Fondazione Bellini</publisher>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl source="#Seminara2017" resp="#GS" ana="136">
+          <citedRange unit="page" from="226" to="226">226</citedRange>
+        </bibl>
+        <msDesc>
+          <msIdentifier>
+            <country>Italia</country>
+            <settlement>Catania</settlement>
+            <repository role="museum" ref="http://www.rism.info/typo3conf/ext/user_apachesolr/result.php?q=id:30003436" n="I-CATm">Museo Belliniano Catania</repository>
+            <idno type="inventory">LL1.6</idno>
+            <altIdentifier><idno type="collocation">in esposizione Casa Natale, sala B, vetrina 3, ripiano 1, IV</idno></altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <msItem>
+              <author xml:lang="it" ref="#VB">Vincenzo Bellini</author>
+              <title type="uniform" xml:lang="it">
+                <persName ref="#VB" role="composer">Vincenzo Bellini</persName> a <persName ref="#OT">Ottavio Tasca</persName>, in <placeName ref="#CO">Como</placeName>, <date when="1830-08-24" cert="high" resp="#GS">24 agosto 1830</date>
+              </title>
+              <textLang mainLang="it">Italiano di inizio Ottocento</textLang>
+            </msItem>
+          </msContents>
+          <physDesc>
+            <objectDesc>
+              <supportDesc>
+                <support>
+                  <material>Carta sottile.</material>
+                  <stamp>
+                    Non è presente alcun francobollo, ma sono presenti nella parte centrale del verso presenta il timbro di partenza, il timbro di arrivo (parzialmente leggibile), e il sigillo in ceralacca rossa parzialmente conservato.
+                  </stamp>
+                  <p>Lettera in buone condizioni, senza filigrana, composta da un solo folio piegato in più parti; testo su entrambe le facciate, colore beige, inchiostro nero.
+                    Nella parte superiore sinistra del fronte è presente un appunto numerico di altra mano, probabilmente un catalogatore.
+                  </p>
+                </support>
+                <extent>
+                  <measure type="folio">1</measure>
+                  <dimensions unit="mm">
+                    <height>197</height>
+                    <width>135</width>
+                  </dimensions>
+                </extent>
+                <foliation>
+                  Il folio presenta segni di piegature asimmetriche che lo suddividono in tre sezioni verticali e tre orizzontali, per un totale nove sezioni. Il folio stesso funge anche da busta con l'indirizzo nella parte centrale del fronte verso.
+                </foliation>
+                <condition>
+                  <p>Lettera in buone condizioni fisiche.</p>
+                </condition>
+              </supportDesc>
+            </objectDesc>
+            <handDesc hands="2">
+              <handNote xml:id="h1">
+                <p>Sono presenti delle annotazioni di tratto leggero e di calligrafia diversa da quella principale. Probabilmente mano di un catalogatore</p>
+              </handNote>
+            </handDesc>
+            <sealDesc>
+              <seal type="wax">
+                <p>La parte centrale del verso presenta un sigillo in ceralacca rossa parzialmente conservato.</p>
+              </seal>
+            </sealDesc>
+          </physDesc>
+          <additional>
+            <adminInfo>
+              <note>
+                All'interno del carteggio belliniano (LL), la segnatura LL1.6 identifica la sesta missiva in ordine cronologico del primo sottogruppo, che corrisponde alle lettere scritte da Vincenzo Bellini.
+              </note>
+            </adminInfo>
+          </additional>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <correspDesc>
+        <correspAction type="sent">
+          <persName ref="#VB" role="composer">Vincenzo Bellini</persName>
+          <placeName ref="#CO" type="postmark">Como</placeName>
+          <date when="1830-08-24" cert="high" resp="#GS" type="writing">24 agosto 1830</date>
+        </correspAction>
+        <correspAction type="received">
+          <persName ref="#OT">Ottavio Tasca</persName>
+          <placeName ref="#BG" type="writing">Bergamo</placeName>
+          <date>Sconosciuta</date>
+        </correspAction>
+        <correspContext>
+          <p>Non è presente un contesto di riferimento</p>
+        </correspContext>
+      </correspDesc>
+      <textClass>
+        <keywords scheme="http://thes.bncf.firenze.sbn.it">
+          <term resp="#GS">Lettera</term>
+        </keywords>
+      </textClass>
+      <langUsage>
+        <language ident="it">Italiano di inizio Ottocento</language>
+        <language ident="fr">Francese</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+
+  <facsimile>
+    <surface n="1" xml:id="LL1.6_folio_1fr">
+      <graphic url='LL1.6_0001.jpg' width='1672.5px' height='2417.5px' />
+      <zone ulx="72" uly="119" lrx="269" lry="293" rendition="HotSpot" xml:id="LL1.6_hotspot_1fr_01" />       <!--Annotazione margine sinistro superiore-->
+      <zone ulx="855" uly="100" lrx="1568" lry="202" rendition="Line" xml:id="LL1.6_line_1fr_01"/>
+      <zone ulx="234" uly="313" lrx="757" lry="395" rendition="Line" xml:id="LL1.6_line_1fr_02"/>
+      <zone ulx="570" uly="500" lrx="1605" lry="574" rendition="Line" xml:id="LL1.6_line_1fr_03"/>
+      <zone ulx="194" uly="598" lrx="1595" lry="684" rendition="Line" xml:id="LL1.6_line_1fr_04"/>
+      <zone ulx="203" uly="724" lrx="1603" lry="769" rendition="Line" xml:id="LL1.6_line_1fr_05"/>
+      <zone ulx="205" uly="814" lrx="1607" lry="884" rendition="Line" xml:id="LL1.6_line_1fr_06"/>
+      <zone ulx="205" uly="908" lrx="1603" lry="968" rendition="Line" xml:id="LL1.6_line_1fr_07"/>
+      <zone ulx="227" uly="1008" lrx="1594" lry="1063" rendition="Line" xml:id="LL1.6_line_1fr_08"/>
+      <zone ulx="220" uly="1090" lrx="1602" lry="1163" rendition="Line" xml:id="LL1.6_line_1fr_09"/>
+      <zone ulx="212" uly="1182" lrx="1583" lry="1242" rendition="Line" xml:id="LL1.6_line_1fr_10"/>
+      <zone ulx="227" uly="1275" lrx="1612" lry="1353" rendition="Line" xml:id="LL1.6_line_1fr_11"/>
+      <zone ulx="229" uly="1380" lrx="1603" lry="1434" rendition="Line" xml:id="LL1.6_line_1fr_12"/>
+      <zone ulx="219" uly="1470" lrx="1614" lry="1543" rendition="Line" xml:id="LL1.6_line_1fr_13"/>
+      <zone ulx="220" uly="1553" lrx="1604" lry="1635" rendition="Line" xml:id="LL1.6_line_1fr_14"/>
+      <zone ulx="220" uly="1657" lrx="1608" lry="1709" rendition="Line" xml:id="LL1.6_line_1fr_15"/>
+      <zone ulx="219" uly="1750" lrx="1615" lry="1809" rendition="Line" xml:id="LL1.6_line_1fr_16"/>
+      <zone ulx="240" uly="1842" lrx="1618" lry="1924" rendition="Line" xml:id="LL1.6_line_1fr_17"/>
+      <zone ulx="229" uly="1930" lrx="1618" lry="2000" rendition="Line" xml:id="LL1.6_line_1fr_18"/>
+      <zone ulx="224" uly="2030" lrx="1620" lry="2103" rendition="Line" xml:id="LL1.6_line_1fr_19"/>
+      <zone ulx="227" uly="2118" lrx="1619" lry="2193" rendition="Line" xml:id="LL1.6_line_1fr_20"/>
+      <zone ulx="227" uly="2207" lrx="1617" lry="2315" rendition="Line" xml:id="LL1.6_line_1fr_21"/>
+    </surface>
+    <surface n="2" xml:id="LL1.6_folio_1rr">
+      <graphic url='LL1.6_0002.jpg' width='1663.5px' height='2408.5px' />
+      <zone ulx="139" uly="475" lrx="1605" lry="589" rendition="Line" xml:id="LL1.6_line_1rr_01"/>
+      <zone ulx="144" uly="594" lrx="1599" lry="664" rendition="Line" xml:id="LL1.6_line_1rr_02"/>
+      <zone ulx="155" uly="688" lrx="1617" lry="768" rendition="Line" xml:id="LL1.6_line_1rr_03"/>
+      <zone ulx="155" uly="790" lrx="1590" lry="852" rendition="Line" xml:id="LL1.6_line_1rr_04"/>
+      <zone ulx="152" uly="889" lrx="1602" lry="954" rendition="Line" xml:id="LL1.6_line_1rr_05"/>
+      <zone ulx="150" uly="980" lrx="1620" lry="1070" rendition="Line" xml:id="LL1.6_line_1rr_06"/>
+      <zone ulx="152" uly="1077" lrx="1620" lry="1155" rendition="Line" xml:id="LL1.6_line_1rr_07"/>
+      <zone ulx="154" uly="1174" lrx="1620" lry="1269" rendition="Line" xml:id="LL1.6_line_1rr_08"/>
+      <zone ulx="155" uly="1274" lrx="1623" lry="1350" rendition="Line" xml:id="LL1.6_line_1rr_09"/>
+      <zone ulx="158" uly="1359" lrx="1615" lry="1440" rendition="Line" xml:id="LL1.6_line_1rr_10"/>
+      <zone ulx="158" uly="1450" lrx="675" lry="1530" rendition="Line" xml:id="LL1.6_line_1rr_11"/>
+      <zone ulx="935" uly="1512" lrx="1402" lry="1604" rendition="Line" xml:id="LL1.6_line_1rr_12"/>
+      <zone ulx="655" uly="1613" lrx="1443" lry="1725" rendition="Line" xml:id="LL1.6_line_1rr_13"/>
+    </surface>
+    <surface n="3" xml:id="LL1.6_folio_1rv">
+      <graphic url='LL1.6_0003.jpg' width='1672.5px' height='2417.5px' />
+    </surface>
+    <surface n="4" xml:id="LL1.6_folio_1fv">
+      <graphic url='LL1.6_0004.jpg' width='2409px' height='1664px'/>
+      <zone ulx="1037" uly="1203" lrx="1418" lry="1546" rendition="HotSpot" xml:id="LL1.6_hotspot_1fv_01"/> <!-- ceralacca-->
+      <zone ulx="904" uly="320" lrx="1298" lry="514" rendition="HotSpot" xml:id="LL1.6_hotspot_1fv_02"/>   <!-- Timbro di partenza-->
+      <zone ulx="520" uly="106" lrx="977" lry="313" rendition="HotSpot" xml:id="LL1.6_hotspot_1fv_03"/> <!-- Timbro di arrivo-->
+      <zone ulx="1333" uly="343" lrx="1788" lry="583" rendition="HotSpot" xml:id="LL1.6_hotspot_1fv_04"/> <!-- seconda mano-->
+      <zone ulx="534" uly="601" lrx="1897" lry="768" rendition="Line" xml:id="LL1.6_line_1fv_01"/>
+      <zone ulx="1283" uly="826" lrx="1978" lry="983" rendition="Line" xml:id="LL1.6_line_1fv_02"/>
+    </surface>
+  </facsimile>
+
+  <text type="letter" xml:id="LL1.6" subtype="manuscript" n="LL1.6">
+    <front>
+      <pb n="4" xml:id="LL1.6_fol_1fv_front" facs="#LL1.6_folio_1fv"/>
+      <div type="envelope">
+        <div type="sent">
+          <ab xml:id="LL1.6_hs_1fv_02" facs="#LL1.6_hotspot_1fv_02" copyOf="#LL1.6_hs_1fv_02_body">
+            <stamp type="postmark">
+              <mentioned>
+                <placeName ref="#CO">COMO</placeName>
+              </mentioned>
+            </stamp>
+          </ab>
+        </div>
+        <div type="destination">
+          <ab xml:id="LL1.6_hs_1fv_03" facs="#LL1.6_hotspot_1fv_03" copyOf="#LL1.6_hs_1fv_03_body">
+            <stamp type="postmark">
+              <mentioned>
+                <placeName ref="#BG">Berg<unclear reason="illegible">amo</unclear></placeName>
+                <date when="1830-08-27" cert="medium" resp="#FBO">27
+                  <unclear reason="illegible">agosto 1830</unclear>
+                </date>
+              </mentioned>
+            </stamp>
+          </ab>
+          <ab type="receiver">
+            <address>
+              <lb xml:id="LL1.6_lb_1fv_01" n="1" facs="#LL1.6_line_1fv_01"/>
+              <addrLine>Monsieur le Comte <persName ref="#OT">Oct<damage type="ink" extent="1" unit="chars">a</damage>ve Tasca</persName></addrLine>
+              <lb xml:id="LL1.6_lb_1fv_02" n="2" facs="#LL1.6_line_1fv_02"/>
+              <addrLine>à <placeName ref="#BG">Bergame</placeName></addrLine>
+            </address>
+          </ab>
+        </div>
+      </div>
+    </front>
+
+    <body xml:lang="it">
+      <div type="fronte-recto">
+        <pb n="1" xml:id="LL1.6_fol_1fr" facs="#LL1.6_folio_1fr"/>
+        <div type="paratext">
+          <ab type="paratext" subtype="addition" hand="#h1" xml:id="LL1.6_hs_1fr_01" facs="#LL1.6_hotspot_1fr_01">
+            <fw type="catalogNum"><idno type="oldCat">38</idno></fw>
+          </ab>
+        </div>
+        <div type="opener" n="o_01">
+          <dateline n="ab_01">
+            <s type="sentence" n="s_01">
+              <lb xml:id="LL1.6_lb_1fr_01" n="1" facs="#LL1.6_line_1fr_01"/>
+              <address>
+                <addrLine>
+                  <placeName ref="#CO">Como</placeName>
+                </addrLine>
+              </address>
+              <date when="1830-08-24">24: agosto 30:</date>
+            </s>
+          </dateline>
+        </div>
+        <div type="letter-body" n="t_01">
+          <salute n="ab_02">
+            <s type="sentence" n="s_02">
+              <lb xml:id="LL1.6_lb_1fr_02" n="2" facs="#LL1.6_line_1fr_02"/>
+              <hi rend="align(left)">Mio caro
+                <persName ref="#OT">Tasca</persName><ptr target="#LL1_6_note1"/>
+              </hi>
+            </s>
+          </salute>
+          <ab type="parag" xml:id="splitted_ab_1" rend="first_line_indented" n="ab_03">
+            <s type="sentence" n="s_03">
+              <lb xml:id="LL1.6_lb_1fr_03" n="3" facs="#LL1.6_line_1fr_03"/>
+              Mi portai da tua <persName ref="#OT_cognata">cognata</persName> e mi
+              <lb xml:id="LL1.6_lb_1fr_04" n="4" facs="#LL1.6_line_1fr_04"/>
+              feci annunziare: sfortunatamente era per <w>anda
+              <lb xml:id="LL1.6_lb_1fr_05" n="5" facs="#LL1.6_line_1fr_05" break="no" rend="double stroke"/>
+              re</w> a pranzo, e non potei parlare che con suo
+              <lb xml:id="LL1.6_lb_1fr_06" n="6" facs="#LL1.6_line_1fr_06"/>
+              <persName ref="#OT_cognata_marito">marito</persName>, a cui consegnai la tua lettera, <w>dando
+              <lb xml:id="LL1.6_lb_1fr_07" n="7" facs="#LL1.6_line_1fr_07" break="no" rend="double stroke"/>
+              gli</w> le relazioni dello stato di tutta la bella
+              <lb xml:id="LL1.6_lb_1fr_08" n="8" facs="#LL1.6_line_1fr_08"/>
+              tua famiglia. </s><s type="sentence" n="s_04">Sò che è sortito l’articolo tuo
+              <lb xml:id="LL1.6_lb_1fr_09" n="9" facs="#LL1.6_line_1fr_09"/>
+              sù la <hi rend="underline"><rs type="work" ref="#Straniera">Straniera</rs></hi>, e <persName ref="#GBa">Barbò</persName>, che vidi questa <w>mat
+              <lb xml:id="LL1.6_lb_1fr_10" n="10" facs="#LL1.6_line_1fr_10" break="no" rend="double stroke"/>
+              tina</w>, me ne disse il contenuto, che io trovai
+              <lb xml:id="LL1.6_lb_1fr_11" n="11" facs="#LL1.6_line_1fr_11"/>
+              ragionatissimo e condito di qualche saletto: <w>bra
+              <lb xml:id="LL1.6_lb_1fr_12" n="12" facs="#LL1.6_line_1fr_12" break="no" rend="double stroke"/>
+              vo</w> il mio <persName ref="#OT">caro amico</persName>; spero che le lodi che
+              <lb xml:id="LL1.6_lb_1fr_13" n="13" facs="#LL1.6_line_1fr_13"/>
+              mi dai le possa impiegare sù qualche <w>par
+              <lb xml:id="LL1.6_lb_1fr_14" n="14" facs="#LL1.6_line_1fr_14" break="no" rend="double stroke"/>
+              to</w> della tua ricca Musa, semmai non obblie<w>
+              <lb xml:id="LL1.6_lb_1fr_15" n="15" facs="#LL1.6_line_1fr_15" break="no" rend="double stroke"/>
+              rai</w> i nostri piani; basta, io spero di vederti
+              <lb xml:id="LL1.6_lb_1fr_16" n="16" facs="#LL1.6_line_1fr_16"/>
+              qui o in <placeName ref="#MI">Milano</placeName>, ed allora rinfrescherò la
+              <lb xml:id="LL1.6_lb_1fr_17" n="17" facs="#LL1.6_line_1fr_17"/>
+              tua memoria.</s><s type="sentence" n="s_05"> – Dimmi se la <persName ref="#SF">Favelli</persName> ha <w>ripre
+              <lb xml:id="LL1.6_lb_1fr_18" n="18" facs="#LL1.6_line_1fr_18" break="no" rend="double stroke"/>
+              so</w> le sue intiere forze.</s><s type="sentence" n="s_06"> – La mia <hi rend="underline"><rs type="work" ref="#Straniera">Straniera</rs></hi>
+              <lb xml:id="LL1.6_lb_1fr_19" n="19" facs="#LL1.6_line_1fr_19"/>
+              seguita a non disgustare?</s><s type="sentence" xml:id="splitted_sentence_1" n="s_07">... Avvisa a <persName ref="#GG"><w>Giorda
+              <lb xml:id="LL1.6_lb_1fr_20" n="20" facs="#LL1.6_line_1fr_20" break="no" rend="double stroke"/>
+              ni</w></persName> che prenda un poco più <hi rend="underline">mosso</hi> il tempo della
+              <lb xml:id="LL1.6_lb_1fr_21" n="21" facs="#LL1.6_line_1fr_21"/>
+              sua <term subtype="music-term" ref="#aria">aria</term>, nella parole <subst><del>Vieni tu meco</del><add>Meco tu vieni</add></subst>ec:<ptr target="#LL1_6_note2"/>,<w xml:id="splitted_word_1">poi</w></s></ab>
+            </div>
+          </div>
+          <div type="retro-recto">
+            <pb n="2" xml:id="LL1.6_fol_1rr" facs="#LL1.6_folio_1rr"/>
+            <div type="letter-body" n="t_02">
+              <ab corresp="#splitted_ab_1">
+                <lb xml:id="LL1.6_lb_1rr_01" n="22" facs="#LL1.6_line_1rr_01" break="no" rend="double stroke"/>
+                <s corresp="#splitted_sentence_1">
+                  <w corresp="#splitted_word_1">ché</w> è l’unico neo che gli si può imputare,
+                  <lb xml:id="LL1.6_lb_1rr_02" n="23" facs="#LL1.6_line_1rr_02"/>
+                  dicendo tutto il resto come stà nel mio pensiero.</s>
+                  <lb xml:id="LL1.6_lb_1rr_03" n="24" facs="#LL1.6_line_1rr_03"/>
+                </ab>
+                <ab type="parag" rend="first_line_indented" n="ab_04">
+                  <s type="sentence" n="s_08">Io resterò in queste rive, forse, sino alla mettà
+                    <lb xml:id="LL1.6_lb_1rr_04" n="25" facs="#LL1.6_line_1rr_04"/>
+                    dell’entrante mese.</s><s type="sentence" n="s_09"> Vedendo <persName ref="#AVD">Visconti</persName> tanti e
+                    <lb xml:id="LL1.6_lb_1rr_05" n="26" facs="#LL1.6_line_1rr_05"/>
+                    tanti saluti da mia parte come anche alla
+                    <lb xml:id="LL1.6_lb_1rr_06" n="27" facs="#LL1.6_line_1rr_06"/>
+                    nostra buona <persName ref="#SF">Favelli</persName>, che mi auguro dell’<w>intut
+                    <lb xml:id="LL1.6_lb_1rr_07" n="28" facs="#LL1.6_line_1rr_07"/>
+                    to</w> rimessa.</s><s type="sentence" n="s_10"> A <persName ref="#DR">Reina</persName> tante cose, e così a
+                    <lb xml:id="LL1.6_lb_1rr_08" n="29" facs="#LL1.6_line_1rr_08"/>
+                    tutti gli amici.</s><s type="sentence" n="s_11"> – Presenta i miei rispetti al
+                    <lb xml:id="LL1.6_lb_1rr_09" n="30" facs="#LL1.6_line_1rr_09"/>
+                    la  <choice><abbr>Sig<am>:<g rend="superscript">ra</g></am></abbr><expan>Sig<ex resp="#GS">nora</ex></expan></choice> <persName ref="#DR">Contessa</persName>, e tu ricevi i miei abbracci
+                    <lb xml:id="LL1.6_lb_1rr_10" n="31" facs="#LL1.6_line_1rr_10"/>
+                    e non obbliare a chi tanto stima la tua
+                    <lb xml:id="LL1.6_lb_1rr_11" n="32" facs="#LL1.6_line_1rr_11"/>
+                    amicizia. </s><s type="sentence" xml:id="splitted_sentence_2" n="s_12">Addio</s></ab>
+                  </div>
+                  <div type="closer" n="c_01">
+                    <salute n="ab_05">
+                      <lb xml:id="LL1.6_lb_1rr_12" n="33" facs="#LL1.6_line_1rr_12"/>
+                      <s corresp="#splitted_sentence_2">
+                        <hi rend="align(right)">Il tuo <choice><abbr>am<am>:<g rend="superscript">o</g></am></abbr><expan>am<ex resp="#GS">ic</ex>o</expan></choice>
+                        <lb xml:id="LL1.6_lb_1rr_13" n="34" facs="#LL1.6_line_1rr_13"/>
+                        <persName ref="#VB"><choice><abbr>Vin<am>:<g rend="superscript">zo</g></am></abbr><expan>Vi<ex resp="#GS">cenzo</ex></expan></choice> Bellini</persName></hi>
+                      </s>
+                    </salute>
+                  </div>
+                </div>
+                <div type="retro-verso">
+                  <pb n="3" xml:id="LL1.6_fol_1rv" facs="#LL1.6_folio_1rv"/>
+                </div>
+                <div type="fronte-verso">
+                  <pb n="4" xml:id="LL1.6_fol_1fv" facs="#LL1.6_folio_1fv"/>
+                  <div type="sent">
+                    <ab xml:id="LL1.6_hs_1fv_02_body" facs="#LL1.6_hotspot_1fv_02">
+                      <stamp type="postmark">
+                        <mentioned>
+                          <placeName ref="#CO">COMO</placeName>
+                        </mentioned>
+                      </stamp>
+                    </ab>
+                  </div>
+                  <div type="destination">
+                    <ab xml:id="LL1.6_hs_1fv_03_body" facs="#LL1.6_hotspot_1fv_03">
+                      <stamp type="postmark">
+                        <mentioned>
+                          <placeName ref="#BG">Berg<unclear reason="illegible">amo</unclear></placeName>
+                          <date when="1830-08-27" cert="low" resp="#FBO #FBE">27
+                            <unclear reason="illegible">agosto 1830</unclear>
+                          </date>
+                        </mentioned>
+                      </stamp>
+                    </ab>
+                    <ab type="receiver">
+                      <address>
+                        <lb xml:id="LL1.6_lb_1fv_01_body" n="1" facs="#LL1.6_line_1fv_01"/>
+                        <addrLine>Monsieur le Comte <persName ref="#OT">Oct<damage type="ink" extent="1" unit="chars">a</damage>ve Tasca</persName></addrLine>
+                        <lb xml:id="LL1.6_lb_1fv_02_body" n="2" facs="#LL1.6_line_1fv_02"/>
+                        <addrLine>à <placeName ref="#BG">Bergame</placeName></addrLine>
+                      </address>
+                    </ab>
+                  </div>
+                  <div type="paratext">
+                    <ab type="paratext" subtype="addition" hand="#h1" xml:id="LL1.6_hs_1fv_04" facs="#LL1.6_hotspot_1fv_04">				<!-- seconda mano -->
+                      <persName ref="#VB">Bellini</persName>
+                    </ab>
+                  </div>
+                </div>
+              </body>
+
+              <back>
+                <div type="notes">
+                  <div type="ann_notes">
+                    <note xml:id="LL1_6_note1" resp="#GS">
+                      <p>
+                        Il conte Ottavio Tasca (Seriate, Bergamo, 1795 - 1872), patriota e letterato, risiedeva a <placeName ref="#BG">Bergamo</placeName>; nel «Giornale della Provincia di Bergamo» aveva pubblicato un articolo sull’allestimento de <rs type="work" ref="#Straniera">La Straniera</rs> al Teatro Ricciardi nell’agosto del 1830.
+                      </p>
+                    </note>
+                    <note xml:id="LL1_6_note2" resp="#GS">
+                      <p>
+                        <persName ref="#VB" role="composer">Bellini</persName> si riferisce alla <term subtype="music-term" ref="#cabaletta">cabaletta</term> dell’<term subtype="music-term" ref="#aria">Aria</term> di Valdeburgo «Meco tu vieni, o misera», dall’<term subtype="music-term" ref="#atto">Atto</term> II de <rs type="work" ref="#Straniera">La straniera</rs>.
+                      </p>
+                    </note>
+                  </div>
+
+                  <div type="bibliography">
+                    <listBibl xml:id="LL1_6_bibliography">
+                      <head>Bibliography of the letter LL1.6</head>
+                      <bibl xml:id="LL1_6_Ganguzza">
+                        <ref target="#Ganguzza1970">
+                          <bibl>
+                            <author>Ganguzza</author>
+                            <date when="1970">1970</date>
+                            <citedRange unit="page" from="24" to="26">24-26</citedRange>
+                          </bibl>
+                        </ref>
+                      </bibl>
+                      <bibl xml:id="LL1_6_Neri">
+                        <ref target="#Neri2005">
+                          <bibl>
+                            <author>Neri</author>
+                            <date when="2005">2005</date>
+                            <citedRange unit="page" from="176" to="177">176-177</citedRange>
+                          </bibl>
+                        </ref>
+                      </bibl>
+                    </listBibl>
+                  </div>
+
+                </div>
+
+                <div type="additional_list">
+                  <listPerson>
+
+                    <person xml:id="VB" sameAs="http://viaf.org/viaf/39560983">
+                      <persName role="composer"> <!-- esempi: composer, librettist, tenore, editor, ...-->
+                        <ref target="http://data.rism.info/id/rismauthorities/pe11648 http://www.treccani.it/enciclopedia/vincenzo-bellini_(Dizionario-Biografico)"/>
+                        <forename>Vincenzo</forename>
+                        <forename>Salvatore</forename>
+                        <forename>Carmelo</forename>
+                        <forename>Francesco </forename>
+                        <surname>Bellini</surname>
+                        <addName type="alias">Il Cigno</addName>
+                        <roleName type="honorific">Cavaliere della Legione d'onore</roleName>
+                      </persName>
+                      <sex>M </sex>
+                      <birth><date when="1801-11-03">3 novembre 1801</date>
+                      <placeName ref="#CT">
+                        <settlement type="municipality">Catania</settlement>
+                        <settlement type="provincia" key="CT">Catania</settlement>
+                        <country key="IT">Italia</country>
+                      </placeName>
+                    </birth>
+                    <death><date when="1835-09-23">23 settembre 1835</date>
+                    <placeName ref="#Put">
+                      <settlement type="municipality">Puteaux</settlement>
+                      <settlement type="department" key="Paris">Paris</settlement>
+                      <country key="FR">France</country>
+                    </placeName>
+                  </death>
+                  <note><!--  note da creare con l'indicazione di dove e' vissuto durante quali periodi  -->
+                  </note>
+                </person>
+
+                <person xml:id="OT">
+                  <persName role="writer">
+                    <forename>Ottavio</forename>
+                    <surname>Tasca</surname>
+                    <roleName>conte</roleName>
+                  </persName>
+                  <sex>M </sex>
+                  <birth>
+                    <date when="1795">1795</date>
+                    <placeName ref="#BG">
+                      <settlement type="municipality">Bergamo</settlement>
+                      <settlement type="provincia" key="BG">Bergamo</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </birth>
+                  <death>
+                    <date when="1872">1872</date>
+                    <placeName ref="#BG">
+                      <settlement type="municipality">Seriate</settlement>
+                      <settlement type="provincia" key="BG">Bergamo</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </death>
+                  <note source="#Seminara2017" resp="#GS" ana="372">
+                    <bibl>
+                      <citedRange unit="page" from="226" to="226">226</citedRange>
+                    </bibl>
+                    Il conte Ottavio Tasca (Seriate, Bergamo, 1795 - 1872), patriota e letterato, risiedeva a <placeName ref="#BG">Bergamo</placeName>; nel «Giornale della Provincia di Bergamo» aveva pubblicato un articolo sull’allestimento de <rs type="work" ref="#Straniera">La Straniera</rs> al Teatro Ricciardi nell’agosto del 1830.
+                  </note>
+                </person>
+
+                <person xml:id="OT_contessa" sex="F">
+                  <p>Contessa Tasca</p>
+                </person>
+
+                <person xml:id="OT_cognata" sex="F">
+                  <p>Cognata di Ottavio Tasca</p>
+                </person>
+
+                <person xml:id="OT_cognata_marito" sex="M">
+                  <p>Marito della cognata di Ottavio Tasca</p>
+                </person>
+
+                <person xml:id="GBa">
+                  <persName role="writer">
+                    <forename>Giacomo</forename>
+                    <surname>Barbò</surname>
+                    <roleName>conte di Castelmorano</roleName>
+                  </persName>
+                  <sex>M</sex>
+                  <birth>
+                    <date when="1786">1786</date>
+                    <placeName ref="#BG">
+                      <settlement type="municipality">Bergamo</settlement>
+                      <settlement type="provincia" key="BG">Bergamo</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </birth>
+                  <death>
+                    <date when="1849">1849</date>
+                    <placeName ref="#BG">
+                      <settlement type="municipality">Bergamo</settlement>>
+                      <settlement type="provincia" key="BG">Bergamo</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </death>
+                  <note source="#Seminara2017" resp="#GS" ana="131">
+                    <bibl>
+                      <citedRange unit="page" from="105" to="105">105</citedRange>
+                    </bibl>
+                    Giacomo Barbò (Bergamo, 1876-1849), conte di Castelmorano, era un coltivatore all’avanguardia nell’allevamento dei bachi da seta. Musicista dilettante, fu autore dei Cenni illustrativi sulla nuova <term subtype="music-term" ref="#opera_seria">opera seria</term> <rs type="work" ref="#Straniera">“La Straniera”</rs>, pubblicati a <placeName ref="#MI">Milano</placeName> da Bianchi nel 1829.
+                  </note>
+                </person>
+
+                <person xml:id="SF">
+                  <persName role="soprano">
+                    <forename>Stefania</forename>
+                    <surname>Favelli</surname>
+                  </persName>
+                  <sex>F</sex>
+                  <birth>
+                    <date when="1800" cert="medium">1800</date>
+                    <placeName type="unknown"></placeName>
+                  </birth>
+                  <death>
+                    <date notBefore="1861">dopo il 1860</date>
+                    <placeName type="unknown"></placeName>
+                  </death>
+                  <note source="#Seminara2017" resp="#GS" ana="128">
+                    <bibl>
+                      <citedRange unit="page" from="104" to="104">104</citedRange>
+                    </bibl>
+                    Stefania Favelli (1800 ca.-dopo il 1860), soprano. Dopo l’esordio a <placeName ref="#Paris">Parigi</placeName> nel 1820 ne Le nozze di Figaro di Mozart, fu attiva a <placeName ref="#Wien">Vienna</placeName> e nei maggiori teatri d’Italia. Tenne il ruolo di Alaide nell’allestimento della <rs type="work" ref="#Straniera">Straniera</rs> che si diede al Teatro Ricciardi di <placeName ref="#BG">Bergamo</placeName> il 17 agosto 1830.
+                  </note>
+                </person>
+
+                <person xml:id="GG">
+                  <persName role="basso">
+                    <forename>Giovanni</forename>
+                    <surname>Giordani</surname>
+                  </persName>
+                  <sex>M</sex>
+                  <birth>
+                    <date when="1801">1801</date>
+                    <placeName ref="#BG">
+                      <settlement type="municipality">Bergamo</settlement>
+                      <settlement type="provincia" key="BG">Bergamo</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </birth>
+                  <death>
+                    <date when="1875">1875</date>
+                    <placeName>
+                      <settlement type="municipality">Roma</settlement>>
+                      <settlement type="provincia" key="RM">Roma</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </death>
+                  <note source="#Seminara2017" resp="#GS" ana="373">
+                    <bibl>
+                      <citedRange unit="page" from="226" to="226">226</citedRange>
+                    </bibl>
+                    Giovanni Giordani (Bergamo, 1801 - Roma, 1875), <term subtype="music-term" ref="#basso">basso</term>, tenne il ruolo di Valdeburgo nella rappresentazione bergamasca de <rs type="work" ref="#Straniera">La straniera</rs>.
+                  </note>
+                </person>
+
+                <person xml:id="DR">
+                  <persName role="tenore">
+                    <forename>Domenico</forename>
+                    <surname>Reina</surname>
+                  </persName>
+                  <sex>M</sex>
+                  <birth>
+                    <date when="1796">1796</date>
+                    <placeName>
+                      <settlement type="municipality">Lugano</settlement>
+                      <settlement type="country" key="TI">Ticino</settlement>
+                      <country key="CH">Svizzera</country>
+                    </placeName>
+                  </birth>
+                  <death>
+                    <date when="1843">1843</date>
+                    <placeName ref="#MI">
+                      <settlement type="municipality">Milano</settlement>
+                      <settlement type="provincia" key="MI">Milano</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </death>
+                  <note source="#Seminara2017" resp="#GS" ana="199">
+                    <bibl>
+                      <citedRange unit="page" from="138" to="138">138</citedRange>
+                    </bibl>
+                    Domenico Reina (Lugano, 1796-Milano, 1843), <term subtype="music-term" ref="#tenore">tenore</term>. Dopo l’esordio in Italia, nel 1823 al King’s Theatre di <placeName ref="#London">Londra</placeName> prese parte agli allestimenti delle opere di Rossini Ricciardo e Zoraide, La donna del lago e Matilde di Shabran. Tenne il ruolo di Arturo nella prima rappresentazione de <rs type="work" ref="#Straniera">La straniera</rs>, messa in scena al <orgName type="theatre" ref="#Scala">Teatro alla Scala</orgName> il 14 febbraio 1829. Ancora alla Scala cantò insieme a Maria Malibran in <rs type="work" ref="#Norma">Norma</rs> (27 settembre 1834) e nei <rs type="work" ref="#Capuleti">Capuleti</rs> (9 ottobre 1934).
+                  </note>
+                </person>
+
+                <person xml:id="AVD">
+                  <persName>
+                    <forename>Alessandro</forename>
+                    <surname>Visconti d'Aragona</surname>
+                    <roleName>Marchese d'Invorio</roleName>
+                  </persName>
+                  <sex>M</sex>
+                  <birth>
+                    <date when="1785">1785</date>
+                    <placeName ref="#MI">
+                      <settlement type="municipality">Milano</settlement>
+                      <settlement type="provincia" key="MI">Milano</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </birth>
+                  <death>
+                    <date when="1851-01-06">6 gennaio 1851</date>
+                    <placeName ref="#MI">
+                      <settlement type="municipality">Milano</settlement>>
+                      <settlement type="provincia" key="MI">Milano</settlement>
+                      <country key="IT">Italia</country>
+                    </placeName>
+                  </death>
+                </person>
+
+                <listRelation>
+                  <relation name="spouse" mutual="#OT #OT_contessa"/>
+                  <relation name="spouse" mutual="#OT_cognata #OT_cognata_marito"/>
+                  <relation name="spouse" mutual="#AVD #VVD"/>
+                  <relation name="sister-in-law" active="#OT_cognata" passive="#OT"/>
+                  <relation name="father-in-law" active="#AVD" passive="#CTB"/>
+                  <relation name="friend" mutual="#OT #VB"/>
+                </listRelation>
+
+              </listPerson>
+
+              <listBibl>
+                <bibl xml:id="Ganguzza1970" type="print">
+                  <author xml:id="NG">
+                    <forename>Niny</forename>
+                    <surname>Ganguzza</surname>
+                  </author>
+                  <title level="a">Inediti belliniani: Agosto 1830. La straniera a Bergamo</title>
+                  <title level="j">L'Opera</title>
+                  <biblScope unit="volume">V - numero monografico</biblScope>
+                  <biblScope unit="issue">16-17</biblScope>
+                  <date when="1970">1970</date>
+                </bibl>
+
+                <bibl xml:id="Seminara2017" type="print">
+                  <editor ref="#GS">
+                    <forename>Graziella</forename>
+                    <surname>Seminara</surname>
+                  </editor>
+                  <title level="m">Vincenzo Bellini. Carteggi</title>
+                  <title level="s">Historiae Musicae Cultores</title>
+                  <biblScope unit="volume">CXXXI</biblScope>
+                  <biblScope unit="page">pp. vi+622</biblScope>
+                  <pubPlace>Firenze</pubPlace>
+                  <publisher>Leo S. Olschki Editore</publisher>
+                  <date when="2017">2017</date>
+                </bibl>
+
+                <bibl xml:id="Neri2005" type="print">
+                  <author xml:id="CN">
+                    <forename>Carmelo</forename>
+                    <surname>Neri</surname>
+                  </author>
+                  <title level="m">Vincenzo Bellini. Nuovo Epistolario. 1819-1835</title>
+                  <pubPlace>Catania</pubPlace>
+                  <publisher>Agorà</publisher>
+                  <date when="2005">2005</date>
+                </bibl>
+              </listBibl>
+
+              <listPlace>
+                <place xml:id="BG">
+                  <placeName ref="https://www.geonames.org/6542116/bergamo.html https://www.treccani.it/enciclopedia/bergamo/">Bergamo</placeName>
+                  <country key="IT">Italia</country>
+                  <note></note>
+                </place>
+                <place xml:id="CO">
+                  <placeName ref="http://www.geonames.org/3178229/como.html http://www.treccani.it/enciclopedia/como/">Como</placeName>
+                  <country key="IT">Italia</country>
+                  <note></note>
+                </place>
+                <place xml:id="MI">
+                  <placeName ref="http://www.geonames.org/3173435 http://www.treccani.it/enciclopedia/milano/">Milano</placeName>
+                  <country key="IT">Italia</country>
+                  <note></note>
+                </place>
+              </listPlace>
+
+              <list type="terminology">
+                <label>
+                  <term subtype="music-term" xml:lang="it" xml:id="aria" key="">Aria</term>
+                </label>
+                <item>
+                  <gloss xml:lang="it" target="#aria" source="#DellaSeta2010">
+                    Brano per voce sola appartenente a un’<term subtype="music-term" ref="#opera">opera</term>, <term subtype="music-term"> oratorio </term>, <term subtype="music-term">cantata</term> o ad altro genere di <term subtype="music-term">teatro musicale</term> (nel <term subtype="music-term" ref="#balletto">balletto</term> solo strumentale). Il termine, usato già nel XIV sec. per indicare una melodia dal profilo ben riconoscibile, fu impiegato fin dalle origini dell’opera per designare sezioni cantabili che interrompevano la continuità del <term subtype="music-term"> recitar cantando </term>, sia per rappresentare realisticamente l’atto del cantare (“Vi ricorda o boschi ombrosi” nell’Orfeo, 1607), sia per esprimere uno sfogo affettivo del personaggio. <gap reason="editorial"/> Nell’opera italiana del pieno Ottocento prevalse anche nelle arie la struttura in più movimenti codificata dalle opere di Rossini (<term subtype="music-term">numero</term>); questa articolazione favoriva l’integrazione dell’aria nell’azione drammatica in quanto prevedeva l’alternanza tra movimenti dinamici, in cui questa procede (<term subtype="music-term" ref="#scena">scena[4]</term> e <term subtype="music-term">tempo di mezzo</term>), e momenti di stasi riflessiva (<term subtype="music-term">cantabile</term> e <term subtype="music-term">cabaletta</term>); la transizione tra i diversi momenti era spesso innescata dall’intervento di personaggi secondari (<term subtype="music-term">pertichino</term>) che interloquivano col solista titolare dell’aria. <gap reason="editorial"/>
+                  </gloss>
+                </item>
+
+                <label>
+                  <term subtype="music-term" xml:lang="it" xml:id="cabaletta" key="">Cabaletta</term>
+                </label>
+                <item>
+                  <gloss xml:lang="it" target="#cabaletta" source="#DellaSeta2010">
+                    Nell'<term subtype="music-term" ref="#opera">opera</term> italiana dell'Ottocento, la sezione finale, di solito in tempo mosso, di un <term subtype="music-term">numero</term> e in particolare di un'<term subtype="music-term" ref="#aria">aria</term>, a volte di un <term subtype="music-term" ref="#duetto">duetto</term>, chiamata più spesso <term subtype="music-term">stretta</term> dei <term subtype="music-term">pezzi d'assieme</term>. La forma della cabaletta prevede due enunciazioni complete di una stessa melodia con il medesimo testo, separate da un ritornello orchestrale e seguite da una coda. Secondo studi recenti il termine, di etimologia incerta e attestato già nel Settecento, designava in origine la singola melodia da ripetersi; solo successivamente fu usato per definire la sezione nel suo insieme. <gap reason="editorial"/>
+                  </gloss>
+                </item>
+
+                <label>
+                  <term subtype="music-term" xml:lang="it" xml:id="atto" key="lesmu_">Atto</term>
+                </label>
+                <item>
+                  <gloss xml:lang="it" target="#atto" source="#DellaSeta2010">
+                    Unità di suddivisione principale di un dramma, di un’<term subtype="music-term" ref="#opera">opera </term>o di un <term subtype="music-term" ref="#balletto">balletto</term>, che può essere ulteriormente suddivisa in <term subtype="music-term">quadri</term> – sezioni di norma caratterizzate da unità di luogo e tempo – e in <term subtype="music-term" ref="#scena">scene</term>. Implicita nella struttura della tragedia greca, la divisione in atti, di solito cinque separati da intervalli, fu introdotta in epoca romana e fu istituzionalizzata dalle poetiche classicistiche del Cinquecento. <gap reason="editorial"/>Nell’opera italiana si affermarono presto altri modelli: il <term subtype="music-term">dramma per musica</term> tra Sei e Settecento era sempre in tre atti (separati da due <term subtype="music-term">intermezzi</term> e spesso seguiti da un <term subtype="music-term" ref="#balletto">ballo</term>conclusivo), tra Settecento e Ottocento prevalse la divisione in due atti (con un ballo nell’intervallo e un altro in conclusione), nel pieno Ottocento furono adottati modelli che andavano da due a quattro atti, eventualmente preceduti da un <term subtype="music-term">prologo</term>. <gap reason="editorial"/>
+                  </gloss>
+                </item>
+
+              </list>
+
+
+
+              <div type="work">
+                <listBibl>
+                  <bibl xml:id="Straniera">
+                    <ref target="https://it.wikipedia.org/wiki/La_straniera"/>
+                    <title>La straniera</title>
+                    <persName role="composer" ref="#VB">Vincenzo Bellini</persName>
+                    <persName role="librettist" ref="#FR">Felice Romani</persName>
+                    <orgName type="theatre" ref="#Scala">Teatro alla Scala</orgName>
+                    <placeName ref="#MI">Milano</placeName>
+                    <date when="1829-02-14">14 febbraio 1829</date>
+                    <note resp="#GS">
+                      La straniera, ispirata al romanzo di <persName>Charles d’Alincourt L’Étrangere </persName>(pubblicato nel 1825), fu rappresentata al <orgName type="theatre" ref="#Scala">Teatro alla Scala</orgName> il 14 febbraio 1829. Interpreti principali furono <persName>Henriette Méric Lalande</persName>, nel ruolo di Alaide, <persName ref="#DR"> Domenico Reina</persName> nel ruolo di Arturo, <persName>Antonio Tamburini</persName> nel ruolo del barone di Valdeburgo.  L’<term subtype="music-term" ref="#opera">opera</term> ottenne un grande successo e sancì la definitiva affermazione di Bellini nel panorama operistico del tempo.
+                    </note>
+                  </bibl>
+                </listBibl>
+              </div>
+
+            </div>
+          </back>
+        </text>
+      </TEI>

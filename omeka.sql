@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 23, 2024 alle 18:53
--- Versione del server: 10.4.28-MariaDB
--- Versione PHP: 8.2.4
+-- Creato il: Apr 23, 2024 alle 19:52
+-- Versione del server: 10.4.25-MariaDB
+-- Versione PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `api_key` (
-  `id` varchar(32) NOT NULL,
+  `id` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `owner_id` int(11) NOT NULL,
-  `label` varchar(255) NOT NULL,
-  `credential_hash` varchar(60) NOT NULL,
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `credential_hash` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_ip` varbinary(16) DEFAULT NULL COMMENT '(DC2Type:ip_address)',
   `last_accessed` datetime DEFAULT NULL,
   `created` datetime NOT NULL
@@ -46,11 +46,11 @@ CREATE TABLE `api_key` (
 CREATE TABLE `asset` (
   `id` int(11) NOT NULL,
   `owner_id` int(11) DEFAULT NULL,
-  `name` varchar(255) NOT NULL,
-  `media_type` varchar(190) NOT NULL,
-  `storage_id` varchar(190) NOT NULL,
-  `extension` varchar(190) DEFAULT NULL,
-  `alt_text` longtext DEFAULT NULL
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `media_type` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `storage_id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `extension` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_text` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -61,11 +61,11 @@ CREATE TABLE `asset` (
 
 CREATE TABLE `fulltext_search` (
   `id` int(11) NOT NULL,
-  `resource` varchar(190) NOT NULL,
+  `resource` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `owner_id` int(11) DEFAULT NULL,
   `is_public` tinyint(1) NOT NULL,
-  `title` longtext DEFAULT NULL,
-  `text` longtext DEFAULT NULL
+  `title` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `text` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -81,7 +81,7 @@ INSERT INTO `fulltext_search` (`id`, `resource`, `owner_id`, `is_public`, `title
 (4, 'site_pages', NULL, 1, 'Cancel Culture', ''),
 (5, 'media', 4, 1, 'XML', 'XML'),
 (5, 'site_pages', NULL, 1, 'Crowdsourcing', ''),
-(6, 'items', 4, 1, 'Primo Fascicolo', 'B. 10 J. 95\nPrimo Fascicolo\nSupporto:\nIl fascicolo cartaceo è composto da 6 pagine totali, compresa la copertina del fascicolo.\n\n\nCondizioni del documento:\nLe pagine si presentano in un ottimo stato di conservazione, solamente la carta appare leggermente ingiallita. Sia le scritte a macchina che a mano, ma anche i timbri sono facilmente comprensibili.\n\n\nFirme:\nNel testo si possono trovare varie firme (se ne contano 6). Inoltre, sono presenti i numeri dei protocolli di telegrafo scritti a mano, per un totale di 9 diverse grafie\nTesto\nDocumento battuto a macchina\nCartaceo\nMarina Militare, Venezia, 7 febbraio 1961\nMinistero della Difesa Marina Ufficio del Segretario Generale Coordinamento  - Seconda Sezione, Roma, 9 Gennaio 1961\nMinistero della Difesa Marina Ufficio del Segretario Generale Coordinamento - Seconda Sezione, 18 marzo 1960\nRoma\nArchivio Marina Militare\n 18 marzo 1960 \n9 Gennaio 1961\n7 febbraio 1961\nPagina 1 \nPagina 2\nPagina 3\nPagina 4\nPagina 5\nPagina 6'),
+(6, 'items', 4, 1, 'Fascicolo 1', 'B. 10 J. 95\nFascicolo 1\nSupporto:\nIl fascicolo cartaceo è composto da 6 pagine totali, compresa la copertina del fascicolo.\n\n\nCondizioni del documento:\nLe pagine si presentano in un ottimo stato di conservazione, solamente la carta appare leggermente ingiallita. Sia le scritte a macchina che a mano, ma anche i timbri sono facilmente comprensibili.\n\n\nFirme:\nNel testo si possono trovare varie firme (se ne contano 6). Inoltre, sono presenti i numeri dei protocolli di telegrafo scritti a mano, per un totale di 9 diverse grafie\nTesto\nDocumento battuto a macchina\nCartaceo\nMarina Militare, Venezia, 7 febbraio 1961\nMinistero della Difesa Marina Ufficio del Segretario Generale Coordinamento  - Seconda Sezione, Roma, 9 Gennaio 1961\nMinistero della Difesa Marina Ufficio del Segretario Generale Coordinamento - Seconda Sezione, 18 marzo 1960\nRoma\nArchivio Marina Militare\n 18 marzo 1960 \n9 gennaio 1961\n7 febbraio 1961\nPagina 1 \nPagina 2\nPagina 3\nPagina 4\nPagina 5\nPagina 6'),
 (6, 'site_pages', NULL, 1, 'Parlano di noi', ''),
 (7, 'media', 4, 1, 'Pagina 1', 'Pagina 1 '),
 (7, 'site_pages', NULL, 1, 'Biografia', ''),
@@ -95,12 +95,37 @@ INSERT INTO `fulltext_search` (`id`, `resource`, `owner_id`, `is_public`, `title
 (11, 'site_pages', NULL, 1, 'Fonti primarie', 'Primo Fascicolo'),
 (12, 'media', 4, 1, 'Pagina 6', 'Pagina 6'),
 (12, 'site_pages', NULL, 1, 'Fonti secondarie', ''),
+(13, 'items', 4, 1, 'Fascicolo 2', 'B. 15 J. 140\nFascicolo 2\nSupporto:\nIl fascicolo di materialecartaceo è composto da 8 pagine totali, compresa la copertina del fascicolo.\nCondizioni del documento:\nLe pagine si presentano in un ottimo stato di conservazione, solamente alcune di esse appaiono leggermente ingiallite. In generale, sono facilmente comprensibili sia le scritte effettuate a macchina a mano, come ad esempio le firme.\nFirme\nIl testo contiene varie firme, per un totale di 6. Inoltre, sono presenti i numeri dei protocolli del telegrafo scitti a mano, permettendo di osservare 9 diverse grafie.\nTesto\nDocumento battuto a macchina\nCartaceo\nMinistero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 9 maggio 1952\nComando in Capo del Dipartimento Marittimo dell\'Alto Tirreno, Ufficio Tecnico, La Spezia, 28 maggio 1952\nMinistero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 17 agosto 1951\nReparto Ufficio Storico, Roma, 12 agosto 1952\nMinistero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 9 agosto 1951\nComando in Capo del Dipartimento Marittimo dell\'Alto Tirreno, Ufficio Tecnico, La Spezia, 4 agosto 1951\nComune della Spezia, Segreteria Generale, La Spezia, 23 luglio 1951\nRoma\nArchivio Marina Militare\n17 agosto 1951\n23 luglio 1951\n4 agosto 1951\n9 agosto 1951\n9 maggio 1952\n28 maggio 1952\n12 agosto 1952\nPagina 1\nPagina 2\nPagina 3\nPagina 4\nPagina 5\nPagina 6\nPagina 7\nPagina 8'),
 (13, 'site_pages', NULL, 1, 'Galleria', ''),
+(14, 'media', 4, 1, 'Pagina 1', 'Pagina 1'),
 (14, 'site_pages', NULL, 1, 'Media', ''),
+(15, 'media', 4, 1, 'Pagina 2', 'Pagina 2'),
 (15, 'site_pages', NULL, 1, 'Interviste', ''),
+(16, 'media', 4, 1, 'Pagina 3', 'Pagina 3'),
 (16, 'site_pages', NULL, 1, 'Istituto Luce', ''),
+(17, 'media', 4, 1, 'Pagina 4', 'Pagina 4'),
 (17, 'site_pages', NULL, 1, 'Mappe', ''),
-(18, 'site_pages', NULL, 1, 'Credits', '');
+(18, 'media', 4, 1, 'Pagina 5', 'Pagina 5'),
+(18, 'site_pages', NULL, 1, 'Credits', ''),
+(19, 'media', 4, 1, 'Pagina 6', 'Pagina 6'),
+(20, 'media', 4, 1, 'Pagina 7', 'Pagina 7'),
+(21, 'media', 4, 1, 'Pagina 8', 'Pagina 8'),
+(22, 'item_sets', 4, 1, 'Documenti relativi alla statua di Costanzo Ciano', 'Documenti relativi alla statua di Costanzo Ciano\nConservazione:\nUfficio storico della Marina Militare\nData:\naprile 2024\nI documenti sono stati raccolti dall\'archivio della Marina Militare. Raccontano degli spostamenti della statua dal suo basamento originale in piazza a La Spezia, fino al Castello di San Giorgio. Secondo gli ultimi documenti la statua è stata collocata definitivamente al Museo Tecnico Navale di La Spezia.\nTesto\nDocumenti battuti a macchina\nSupporto:\nFogli di carta. Il fascicolo cartaceo è composto da 6 pagine totali, compresa la copertina del fascicolo. Il fascicolo di materiale cartaceo è composto da 8 pagine totali , compresa la copertina del fascicolo. Il fascicolo cartaceo è composto da 14 pagine totali, compresa la copertina del fascicolo.\nEstensione:\n6 + 8 + 14 pagine\nCondizioni:\nIl testo non presenta cancellature, ma timbri, firme e la carta si presenta ingiallita.\nPagine:\nLe pagine sono lunghe in media tra le 28 e 50 righe, considerando anche timbri e firme.\nMani:\nLe pagine dei documenti sono scritte a macchina (Marina Militare di Venezia); sono riportati a mano numeri di protocollo e firme.\nRoma\nArchivio Marina Militare'),
+(23, 'items', 4, 1, 'Fascicolo 3', 'B. 18 f. 165\nFascicolo 3\nSupporto\nIl fascicolo cartaceo è composto da 14 pagine totali, compresa la copertina del fascicolo.\nCondizioni del documento\nLe pagine si presentano in un ottimo stato di conservazione, in alcune di esse la carta appare leggermente ingiallita. Sia le scritte a macchina che a mano, ma anche i timbri sono facilmente comprensibili. Come lo schizzo della statua stessa\nFirme\nNel testo si possono trovare varie firme (se ne contano 6). Inoltre, sono presenti i numeri dei protocolli di telegrafo scritti a mano, per un totale di 9 diverse calligrafie.\nTesto\nDocumento battuto a macchina\nCartaceo\nRoma, 12 marzo 1970\nUfficio Storico M.M., Roma, 12 marzo 1970\nRoma, 6 marzo 1970\nUfficio Storico M.M., Roma, 5 marzo 1970\nRoma\nArchivio Marina Militare\n5 marzo 1970\n6 marzo 1970\n9 marzo 1970\n12 marzo 1970\nPagina 1\nPagina 2\nPagina 3\nPagina 4\nPagina 5\nPagina 6\nPagina 7\nPagina 8\nPagina 9\nPagina 10\nPagina 11\nPagina 12\nPagina 13\nPagina 14'),
+(24, 'media', 4, 1, 'Pagina 1', 'Pagina 1'),
+(25, 'media', 4, 1, 'Pagina 2', 'Pagina 2'),
+(26, 'media', 4, 1, 'Pagina 3', 'Pagina 3'),
+(27, 'media', 4, 1, 'Pagina 4', 'Pagina 4'),
+(28, 'media', 4, 1, 'Pagina 5', 'Pagina 5'),
+(29, 'media', 4, 1, 'Pagina 6', 'Pagina 6'),
+(30, 'media', 4, 1, 'Pagina 7', 'Pagina 7'),
+(31, 'media', 4, 1, 'Pagina 8', 'Pagina 8'),
+(32, 'media', 4, 1, 'Pagina 9', 'Pagina 9'),
+(33, 'media', 4, 1, 'Pagina 10', 'Pagina 10'),
+(34, 'media', 4, 1, 'Pagina 11', 'Pagina 11'),
+(35, 'media', 4, 1, 'Pagina 12', 'Pagina 12'),
+(36, 'media', 4, 1, 'Pagina 13', 'Pagina 13'),
+(37, 'media', 4, 1, 'Pagina 14', 'Pagina 14');
 
 -- --------------------------------------------------------
 
@@ -118,8 +143,10 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`id`, `primary_media_id`) VALUES
+(23, NULL),
 (2, 3),
-(6, 7);
+(6, 7),
+(13, 14);
 
 -- --------------------------------------------------------
 
@@ -132,6 +159,15 @@ CREATE TABLE `item_item_set` (
   `item_set_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dump dei dati per la tabella `item_item_set`
+--
+
+INSERT INTO `item_item_set` (`item_id`, `item_set_id`) VALUES
+(6, 22),
+(13, 22),
+(23, 22);
+
 -- --------------------------------------------------------
 
 --
@@ -142,6 +178,13 @@ CREATE TABLE `item_set` (
   `id` int(11) NOT NULL,
   `is_open` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `item_set`
+--
+
+INSERT INTO `item_set` (`id`, `is_open`) VALUES
+(22, 0);
 
 -- --------------------------------------------------------
 
@@ -160,7 +203,9 @@ CREATE TABLE `item_site` (
 
 INSERT INTO `item_site` (`item_id`, `site_id`) VALUES
 (2, 1),
-(6, 1);
+(6, 1),
+(13, 1),
+(23, 1);
 
 -- --------------------------------------------------------
 
@@ -171,11 +216,11 @@ INSERT INTO `item_site` (`item_id`, `site_id`) VALUES
 CREATE TABLE `job` (
   `id` int(11) NOT NULL,
   `owner_id` int(11) DEFAULT NULL,
-  `pid` varchar(190) DEFAULT NULL,
-  `status` varchar(190) DEFAULT NULL,
-  `class` varchar(190) NOT NULL,
-  `args` longtext DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  `log` longtext DEFAULT NULL,
+  `pid` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `class` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `args` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '(DC2Type:json_array)',
+  `log` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `started` datetime NOT NULL,
   `ended` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -189,20 +234,20 @@ CREATE TABLE `job` (
 CREATE TABLE `media` (
   `id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
-  `ingester` varchar(190) NOT NULL,
-  `renderer` varchar(190) NOT NULL,
-  `data` longtext DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  `source` longtext DEFAULT NULL,
-  `media_type` varchar(190) DEFAULT NULL,
-  `storage_id` varchar(190) DEFAULT NULL,
-  `extension` varchar(190) DEFAULT NULL,
-  `sha256` char(64) DEFAULT NULL,
+  `ingester` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `renderer` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '(DC2Type:json_array)',
+  `source` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `media_type` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `storage_id` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `extension` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sha256` char(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `size` bigint(20) DEFAULT NULL,
   `has_original` tinyint(1) NOT NULL,
   `has_thumbnails` tinyint(1) NOT NULL,
   `position` int(11) DEFAULT NULL,
-  `lang` varchar(190) DEFAULT NULL,
-  `alt_text` longtext DEFAULT NULL
+  `lang` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_text` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -218,7 +263,29 @@ INSERT INTO `media` (`id`, `item_id`, `ingester`, `renderer`, `data`, `source`, 
 (9, 6, 'upload', 'file', NULL, 'statua1_ciano_pag3.jpeg', 'image/jpeg', '2ea29063658c35a80ed3ef965f6dd2669ebaa027', 'jpeg', '0e97b457e550f9d2c903ca220997b0b086e3a142328f3c6967420978e4ef6984', 104618, 1, 1, 3, NULL, NULL),
 (10, 6, 'upload', 'file', NULL, 'statua1_ciano_pag4.jpeg', 'image/jpeg', '7d39fabdba6ad7cabb88d1937c8a8380bd95df6a', 'jpeg', 'fd115f24ec3ec3c6281dade0a2268875fd9efccdca31f7b7ecc9bbe970364047', 131146, 1, 1, 4, NULL, NULL),
 (11, 6, 'upload', 'file', NULL, 'statua1_ciano_pag5.jpeg', 'image/jpeg', '380e36b85b7290835f4ed2924c86ee923e3f8c65', 'jpeg', 'ba0ac12836f6a98eccf40167b011a74b94252cc145691e045fead7bd87c8b9e2', 260881, 1, 1, 5, NULL, NULL),
-(12, 6, 'upload', 'file', NULL, 'statua1_ciano_pag6.jpeg', 'image/jpeg', 'e7dee11e245ccd233ea546f3f13ddec492d0ab60', 'jpeg', '1852ca4ccf9ea1f54d32d8e860d02eb140ff9017282f1da0267e139607350f67', 127945, 1, 1, 6, NULL, NULL);
+(12, 6, 'upload', 'file', NULL, 'statua1_ciano_pag6.jpeg', 'image/jpeg', 'e7dee11e245ccd233ea546f3f13ddec492d0ab60', 'jpeg', '1852ca4ccf9ea1f54d32d8e860d02eb140ff9017282f1da0267e139607350f67', 127945, 1, 1, 6, NULL, NULL),
+(14, 13, 'upload', 'file', NULL, 'statua2_ciano_pag1.jpeg', 'image/jpeg', '187ac4401fbc74d6a0acc48479473a0888d6394e', 'jpeg', '5ddf83e9ca8f46ec645550d6eee4fa3f283353b32f2c913b014ffe158ae8b025', 81736, 1, 1, 1, NULL, NULL),
+(15, 13, 'upload', 'file', NULL, 'statua2_ciano_pag2.jpeg', 'image/jpeg', '041bea2836172b77d36c687f1386148aead82875', 'jpeg', '8ac9831cb675566e340bdf93b07239ae6710e1164e97ba652660f48b6f185806', 91180, 1, 1, 2, NULL, NULL),
+(16, 13, 'upload', 'file', NULL, 'statua2_ciano_pag3.jpeg', 'image/jpeg', '14c190a0176e4b371c62546f8b28eeb9ca1390f4', 'jpeg', '30ca4b2a05a3dcf59b8ca9dd3957a4b148900b9abececa88ea62daad52faaaf2', 92156, 1, 1, 3, NULL, NULL),
+(17, 13, 'upload', 'file', NULL, 'statua2_ciano_pag4.jpeg', 'image/jpeg', '747b5ab1cef4abc52b0b8d21439e50ed8692b912', 'jpeg', '0694c2aa47283c7b35e3be481462290aa568d7e393826f68c41e6450f88735aa', 218129, 1, 1, 4, NULL, NULL),
+(18, 13, 'upload', 'file', NULL, 'statua2_ciano_pag5.jpeg', 'image/jpeg', '623a9bf0c4c31d1d378ab72db11c3c3f4641e90d', 'jpeg', 'cb3ff7635360a84e7f46383722f6be3868e0a85de608890f19eeff3597445cc8', 84042, 1, 1, 5, NULL, NULL),
+(19, 13, 'upload', 'file', NULL, 'statua2_ciano_pag6.jpeg', 'image/jpeg', '950f6486750884d73473b4b230624f9848f069ee', 'jpeg', '3132734a740ac05193bc0eca7c66d09a00e9c689b02e05f693ab27a3d6fc80ff', 208336, 1, 1, 6, NULL, NULL),
+(20, 13, 'upload', 'file', NULL, 'statua2_ciano_pag7.jpeg', 'image/jpeg', 'b1606a8103da86855ce519032f872645e896a957', 'jpeg', '0d5355d0037bcbbe26cecb9ffe41760236ad057097667232db1d7d9f4371e1dd', 122646, 1, 1, 7, NULL, NULL),
+(21, 13, 'upload', 'file', NULL, 'statua2_ciano_pag8.jpeg', 'image/jpeg', 'b02310d0ba04a1416202e771bd3a881ee557157e', 'jpeg', 'b26fb4f61253fdd51aecfb47f8c1c8bb39784c99762d1638fea5750e4f92a2f5', 108865, 1, 1, 8, NULL, NULL),
+(24, 23, 'upload', 'file', NULL, 'statua3_ciano_pag1.jpeg', 'image/jpeg', '9fc6850cc5ce29eac45ae5aa7966e71c78b3e2e7', 'jpeg', 'a7d457a918b275c85d8c60db7f2e9f01d2cc006a83dcbe0735cc5f8d740bc1e7', 76867, 1, 1, 1, NULL, NULL),
+(25, 23, 'upload', 'file', NULL, 'statua3_ciano_pag2.jpeg', 'image/jpeg', 'fe8fb36b7a6d14dbbf8421b93c926e55adf87e22', 'jpeg', '4ed3f73b9c87f271c5b9dc8104c88fe16904c5cc50b0a1ef8480f1e26efe0907', 36270, 1, 1, 2, NULL, NULL),
+(26, 23, 'upload', 'file', NULL, 'statua3_ciano_pag3.jpeg', 'image/jpeg', 'f592c2dce7e56747e5e123766d1d7e6d762b33e2', 'jpeg', 'b82b553977cb42edae1079b732dd9cd124d5c561f4a82af4b04b8772dd7479ec', 76051, 1, 1, 3, NULL, NULL),
+(27, 23, 'upload', 'file', NULL, 'statua3_ciano_pag4.jpeg', 'image/jpeg', '2c23758cd4de5bdb62ac4a7ffbfacff187d24c0e', 'jpeg', '70e319a0ba8980de605fc16ad59ad2c7857039945970c56ab65ecf3922d3bf61', 68239, 1, 1, 4, NULL, NULL),
+(28, 23, 'upload', 'file', NULL, 'statua3_ciano_pag5.jpeg', 'image/jpeg', '67b89be2c7ef95e473b67b95ed3ac57e046a688c', 'jpeg', '2d9d17e3e4c9ef19422227784552142f625074935e1919bc18b60c6d0bbef1b8', 74867, 1, 1, 5, NULL, NULL),
+(29, 23, 'upload', 'file', NULL, 'statua3_ciano_pag6.jpeg', 'image/jpeg', 'c3a7a35d5584bbc2c16b2792a1293e5370d0e7a2', 'jpeg', '3b055edaa4d5e7a74ab95f917853c7798124395d60156a166eb0ddcfcd5f028a', 98693, 1, 1, 6, NULL, NULL),
+(30, 23, 'upload', 'file', NULL, 'statua3_ciano_pag7.jpeg', 'image/jpeg', 'ff359e3cca2a552aaccac86113c24bdd9c7663e5', 'jpeg', 'b38a6a19db114dc1c51912a512bcc9adfdae1f11670a7cb576153f581626ef99', 47542, 1, 1, 7, NULL, NULL),
+(31, 23, 'upload', 'file', NULL, 'statua3_ciano_pag8.jpeg', 'image/jpeg', '44ded9abf40ddba0b42cf65e695aeb68f4dba147', 'jpeg', 'f90d96bce224f8a81cbf706eab6b0b71ed0e87a51016e79ca41ad7cb8354d7b5', 92902, 1, 1, 8, NULL, NULL),
+(32, 23, 'upload', 'file', NULL, 'statua3_ciano_pag9.jpeg', 'image/jpeg', '84baac8f97b28d905675cba01d3c6dfb875294ed', 'jpeg', '1bfe35b475d7e5128477ef463f2920bba7628ed3837be429f88050132cb9c455', 129772, 1, 1, 9, NULL, NULL),
+(33, 23, 'upload', 'file', NULL, 'statua3_ciano_pag10.jpeg', 'image/jpeg', '5689555289e3de3641f710c46ed3d644d6366c32', 'jpeg', 'b5fb4e408a65afd8d26ac0ae3049cab3aea056e97cc626271c76acde2c9b7694', 61764, 1, 1, 10, NULL, NULL),
+(34, 23, 'upload', 'file', NULL, 'statua3_ciano_pag11.jpeg', 'image/jpeg', 'd25b45b22b7345159ea96fa8d8ce6d2e84044074', 'jpeg', 'ab503c2ab3a582905a0ff438170fa2657835777e7532bc1507af3058f2582208', 160631, 1, 1, 11, NULL, NULL),
+(35, 23, 'upload', 'file', NULL, 'statua3_ciano_pag12.jpeg', 'image/jpeg', '9ac3a0400150dc306a769fcc350108f0e1c30041', 'jpeg', 'e9244e3bb4070c4509afd9fc02df22801c97c130935c2eac063137b0a15ed5cd', 160775, 1, 1, 12, NULL, NULL),
+(36, 23, 'upload', 'file', NULL, 'statua3_ciano_pag13.jpeg', 'image/jpeg', 'dfb915f18ceca3036ef6fde278702b8bc0f704c3', 'jpeg', '94fe87ed89d0893fe5d82817849f39a00a5db45f5cd4d61fa770f61250da7ab0', 99383, 1, 1, 13, NULL, NULL),
+(37, 23, 'upload', 'file', NULL, 'statua3_ciano_pag14.jpeg', 'image/jpeg', '17c4185e9ae39265c0bf5c9866e95171ba91042b', 'jpeg', '5c4418ebc83bfa0031f73f68b4b45f7aa370a3bb120c821e1df699db0cc99e96', 96552, 1, 1, 14, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -227,7 +294,7 @@ INSERT INTO `media` (`id`, `item_id`, `ingester`, `renderer`, `data`, `source`, 
 --
 
 CREATE TABLE `migration` (
-  `version` varchar(16) NOT NULL
+  `version` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -273,9 +340,9 @@ INSERT INTO `migration` (`version`) VALUES
 --
 
 CREATE TABLE `module` (
-  `id` varchar(190) NOT NULL,
+  `id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_active` tinyint(1) NOT NULL,
-  `version` varchar(190) NOT NULL
+  `version` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -318,8 +385,8 @@ CREATE TABLE `property` (
   `owner_id` int(11) DEFAULT NULL,
   `vocabulary_id` int(11) NOT NULL,
   `local_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `label` varchar(255) NOT NULL,
-  `comment` longtext DEFAULT NULL
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -524,11 +591,11 @@ CREATE TABLE `resource` (
   `resource_class_id` int(11) DEFAULT NULL,
   `resource_template_id` int(11) DEFAULT NULL,
   `thumbnail_id` int(11) DEFAULT NULL,
-  `title` longtext DEFAULT NULL,
+  `title` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_public` tinyint(1) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL,
-  `resource_type` varchar(190) NOT NULL
+  `resource_type` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -540,13 +607,38 @@ INSERT INTO `resource` (`id`, `owner_id`, `resource_class_id`, `resource_templat
 (3, 4, NULL, NULL, NULL, 'Articolo La Nazione giugno 1991', 1, '2024-04-15 16:35:44', '2024-04-15 16:35:44', 'Omeka\\Entity\\Media'),
 (4, 4, NULL, NULL, NULL, NULL, 1, '2024-04-19 16:36:14', '2024-04-19 16:36:14', 'Omeka\\Entity\\Media'),
 (5, 4, NULL, NULL, NULL, 'XML', 1, '2024-04-19 16:39:08', '2024-04-19 16:39:08', 'Omeka\\Entity\\Media'),
-(6, 4, 45, 8, NULL, 'Primo Fascicolo', 1, '2024-04-23 16:04:21', '2024-04-23 16:50:20', 'Omeka\\Entity\\Item'),
+(6, 4, 45, 8, NULL, 'Fascicolo 1', 1, '2024-04-23 16:04:21', '2024-04-23 17:36:55', 'Omeka\\Entity\\Item'),
 (7, 4, NULL, NULL, NULL, 'Pagina 1', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
 (8, 4, NULL, NULL, NULL, 'Pagina 2', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
 (9, 4, NULL, NULL, NULL, 'Pagina 3', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
 (10, 4, NULL, NULL, NULL, 'Pagina 4', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
 (11, 4, NULL, NULL, NULL, 'Pagina 5', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
-(12, 4, NULL, NULL, NULL, 'Pagina 6', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media');
+(12, 4, NULL, NULL, NULL, 'Pagina 6', 1, '2024-04-23 16:48:46', '2024-04-23 16:48:46', 'Omeka\\Entity\\Media'),
+(13, 4, 45, 8, NULL, 'Fascicolo 2', 1, '2024-04-23 17:12:19', '2024-04-23 17:37:14', 'Omeka\\Entity\\Item'),
+(14, 4, NULL, NULL, NULL, 'Pagina 1', 1, '2024-04-23 17:22:21', '2024-04-23 17:22:21', 'Omeka\\Entity\\Media'),
+(15, 4, NULL, NULL, NULL, 'Pagina 2', 1, '2024-04-23 17:22:22', '2024-04-23 17:22:22', 'Omeka\\Entity\\Media'),
+(16, 4, NULL, NULL, NULL, 'Pagina 3', 1, '2024-04-23 17:22:22', '2024-04-23 17:22:22', 'Omeka\\Entity\\Media'),
+(17, 4, NULL, NULL, NULL, 'Pagina 4', 1, '2024-04-23 17:22:23', '2024-04-23 17:22:23', 'Omeka\\Entity\\Media'),
+(18, 4, NULL, NULL, NULL, 'Pagina 5', 1, '2024-04-23 17:22:23', '2024-04-23 17:22:23', 'Omeka\\Entity\\Media'),
+(19, 4, NULL, NULL, NULL, 'Pagina 6', 1, '2024-04-23 17:22:23', '2024-04-23 17:22:23', 'Omeka\\Entity\\Media'),
+(20, 4, NULL, NULL, NULL, 'Pagina 7', 1, '2024-04-23 17:22:24', '2024-04-23 17:22:24', 'Omeka\\Entity\\Media'),
+(21, 4, NULL, NULL, NULL, 'Pagina 8', 1, '2024-04-23 17:22:24', '2024-04-23 17:22:24', 'Omeka\\Entity\\Media'),
+(22, 4, 45, 8, NULL, 'Documenti relativi alla statua di Costanzo Ciano', 1, '2024-04-23 17:36:24', '2024-04-23 17:36:24', 'Omeka\\Entity\\ItemSet'),
+(23, 4, 45, 8, NULL, 'Fascicolo 3', 1, '2024-04-23 17:49:09', '2024-04-23 17:51:53', 'Omeka\\Entity\\Item'),
+(24, 4, NULL, NULL, NULL, 'Pagina 1', 1, '2024-04-23 17:51:53', '2024-04-23 17:51:53', 'Omeka\\Entity\\Media'),
+(25, 4, NULL, NULL, NULL, 'Pagina 2', 1, '2024-04-23 17:51:54', '2024-04-23 17:51:54', 'Omeka\\Entity\\Media'),
+(26, 4, NULL, NULL, NULL, 'Pagina 3', 1, '2024-04-23 17:51:54', '2024-04-23 17:51:54', 'Omeka\\Entity\\Media'),
+(27, 4, NULL, NULL, NULL, 'Pagina 4', 1, '2024-04-23 17:51:54', '2024-04-23 17:51:54', 'Omeka\\Entity\\Media'),
+(28, 4, NULL, NULL, NULL, 'Pagina 5', 1, '2024-04-23 17:51:54', '2024-04-23 17:51:54', 'Omeka\\Entity\\Media'),
+(29, 4, NULL, NULL, NULL, 'Pagina 6', 1, '2024-04-23 17:51:55', '2024-04-23 17:51:55', 'Omeka\\Entity\\Media'),
+(30, 4, NULL, NULL, NULL, 'Pagina 7', 1, '2024-04-23 17:51:55', '2024-04-23 17:51:55', 'Omeka\\Entity\\Media'),
+(31, 4, NULL, NULL, NULL, 'Pagina 8', 1, '2024-04-23 17:51:55', '2024-04-23 17:51:55', 'Omeka\\Entity\\Media'),
+(32, 4, NULL, NULL, NULL, 'Pagina 9', 1, '2024-04-23 17:51:56', '2024-04-23 17:51:56', 'Omeka\\Entity\\Media'),
+(33, 4, NULL, NULL, NULL, 'Pagina 10', 1, '2024-04-23 17:51:56', '2024-04-23 17:51:56', 'Omeka\\Entity\\Media'),
+(34, 4, NULL, NULL, NULL, 'Pagina 11', 1, '2024-04-23 17:51:56', '2024-04-23 17:51:56', 'Omeka\\Entity\\Media'),
+(35, 4, NULL, NULL, NULL, 'Pagina 12', 1, '2024-04-23 17:51:56', '2024-04-23 17:51:56', 'Omeka\\Entity\\Media'),
+(36, 4, NULL, NULL, NULL, 'Pagina 13', 1, '2024-04-23 17:51:57', '2024-04-23 17:51:57', 'Omeka\\Entity\\Media'),
+(37, 4, NULL, NULL, NULL, 'Pagina 14', 1, '2024-04-23 17:51:57', '2024-04-23 17:51:57', 'Omeka\\Entity\\Media');
 
 -- --------------------------------------------------------
 
@@ -559,8 +651,8 @@ CREATE TABLE `resource_class` (
   `owner_id` int(11) DEFAULT NULL,
   `vocabulary_id` int(11) NOT NULL,
   `local_name` varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `label` varchar(255) NOT NULL,
-  `comment` longtext DEFAULT NULL
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -686,7 +778,7 @@ CREATE TABLE `resource_template` (
   `resource_class_id` int(11) DEFAULT NULL,
   `title_property_id` int(11) DEFAULT NULL,
   `description_property_id` int(11) DEFAULT NULL,
-  `label` varchar(190) NOT NULL
+  `label` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -708,13 +800,13 @@ CREATE TABLE `resource_template_property` (
   `id` int(11) NOT NULL,
   `resource_template_id` int(11) NOT NULL,
   `property_id` int(11) NOT NULL,
-  `alternate_label` varchar(255) DEFAULT NULL,
-  `alternate_comment` longtext DEFAULT NULL,
+  `alternate_label` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alternate_comment` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
-  `data_type` longtext DEFAULT NULL COMMENT '(DC2Type:json_array)',
+  `data_type` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '(DC2Type:json_array)',
   `is_required` tinyint(1) NOT NULL,
   `is_private` tinyint(1) NOT NULL,
-  `default_lang` varchar(190) DEFAULT NULL
+  `default_lang` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -743,7 +835,7 @@ INSERT INTO `resource_template_property` (`id`, `resource_template_id`, `propert
 --
 
 CREATE TABLE `session` (
-  `id` varchar(190) NOT NULL,
+  `id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `data` longblob NOT NULL,
   `modified` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -780,7 +872,8 @@ INSERT INTO `session` (`id`, `data`, `modified`) VALUES
 ('jhaae0cb0kt4eadmdl7lg46tsu', 0x5f5f4c616d696e61737c613a323a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731323735343730372e38373638333b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a226a68616165306362306b74346561646d646c376c673436747375223b7d7d, 1712754707),
 ('jl9n701g6uk9pb0r62a9ulbj7d', 0x5f5f4c616d696e61737c613a323a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731323430363635302e3931383432383b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a226a6c396e3730316736756b397062307236326139756c626a3764223b7d7d, 1712406650),
 ('ktab46of8cjp5ntt1lb5qgc7ps', 0x5f5f4c616d696e61737c613a323a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731323633363834302e3131313832313b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a226b74616234366f6638636a70356e7474316c6235716763377073223b7d7d, 1712636840),
-('lm6ua3mogsonca5kr9vdp3cnvo', 0x5f5f4c616d696e61737c613a333a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731333838373531302e39383839353b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a223139697576756338726439696c616f75766f3139617063766239223b7d733a34323a224c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333839313033343b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a343a7b733a33323a226236316636653935343761316133343262363638396663303837386336646365223b733a33323a223233656334613065393161323837316261333161373761653961653464336231223b733a33323a223134326261393366626630343037666132666165626631303562346338636334223b733a33323a223936386364373564366662653264353235666330386336313234343833306663223b733a33323a226439336431643936333061663561616238383331356336336161663434393261223b733a33323a223162333863326231666363346137373737313537626364346135356237656234223b733a33323a223965643934316564396663663066343433613133333238633135656334393266223b733a33323a226131393135336135333436623161386332376634616434363638383034616237223b7d733a343a2268617368223b733a36353a2261313931353361353334366231613863323766346164343636383830346162372d3965643934316564396663663066343433613133333238633135656334393266223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4f6d656b614d657373656e6765727c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a303a7b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f417574687c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a313a7b733a373a2273746f72616765223b693a343b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d72656469726563745f75726c7c4e3b, 1713887511);
+('lm6ua3mogsonca5kr9vdp3cnvo', 0x5f5f4c616d696e61737c613a333a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731333838373531302e39383839353b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a223139697576756338726439696c616f75766f3139617063766239223b7d733a34323a224c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333839313033343b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a343a7b733a33323a226236316636653935343761316133343262363638396663303837386336646365223b733a33323a223233656334613065393161323837316261333161373761653961653464336231223b733a33323a223134326261393366626630343037666132666165626631303562346338636334223b733a33323a223936386364373564366662653264353235666330386336313234343833306663223b733a33323a226439336431643936333061663561616238383331356336336161663434393261223b733a33323a223162333863326231666363346137373737313537626364346135356237656234223b733a33323a223965643934316564396663663066343433613133333238633135656334393266223b733a33323a226131393135336135333436623161386332376634616434363638383034616237223b7d733a343a2268617368223b733a36353a2261313931353361353334366231613863323766346164343636383830346162372d3965643934316564396663663066343433613133333238633135656334393266223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4f6d656b614d657373656e6765727c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a303a7b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f417574687c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a313a7b733a373a2273746f72616765223b693a343b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d72656469726563745f75726c7c4e3b, 1713887511),
+('mhhek8a0urnocvh792vu9ndfvk', 0x5f5f4c616d696e61737c613a353a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731333839343735332e3237303339393b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a22676c6a346f7468343234666672366e3463766f3332316f64326c223b7d733a34323a224c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333839353036323b7d733a34343a224c616d696e61735f56616c696461746f725f437372665f73616c745f636f6e6669726d666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333839383333353b7d733a33323a224c616d696e61735f56616c696461746f725f437372665f73616c745f63737266223b613a313a7b733a363a22455850495245223b693a313731333839383136303b7d7d72656469726563745f75726c7c733a32363a22687474703a2f2f6c6f63616c686f73742f7370642f61646d696e223b4c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a313a7b733a33323a226364353963383031626565653636393237663732316336393337623733633235223b733a33323a226565376337666662386436646135323434636262613739353365306338386165223b7d733a343a2268617368223b733a36353a2265653763376666623864366461353234346362626137393533653063383861652d6364353963383031626565653636393237663732316336393337623733633235223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f417574687c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a313a7b733a373a2273746f72616765223b693a343b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4f6d656b614d657373656e6765727c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a303a7b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f636f6e6669726d666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a33383a7b733a33323a223764323065616338363966643164383431346266643635663735623433363237223b733a33323a226231323462636131613166346338663562346166393366653530303064613262223b733a33323a223438633732623966303963393636643138373130383631393162616535663463223b733a33323a226564393362653137376231333737363736373664336230366432616338613537223b733a33323a226533393163326135616234336164633038626637663336313738616132613830223b733a33323a223463613838386562386437356433376661313466393832333738313463323539223b733a33323a223133633563326262313739303632336231373434393261636165366461313462223b733a33323a223738666166326639653263613432363231616436616631616438633832363532223b733a33323a226261643336313438613536653766383763656231666538653131346231333233223b733a33323a223432313231386432326232303939396431326537633732396264336266323135223b733a33323a223030376332303265306666373834656637343965663062633338333531393261223b733a33323a226134626238616635336331303464303766623434636535613336353064343337223b733a33323a223237343566343865666433363430316262376565613637633137333534306539223b733a33323a226331646431346637653365633035633061373936363332613639653739356130223b733a33323a223362663861303166666434326163323431393261636465653634303233356264223b733a33323a226135343362323362323366373639313238393664633237393464383464323065223b733a33323a223532303464663430393237343733653133373864653964323564333336666462223b733a33323a223536656635306266376535663332666332323864396138363236313932616435223b733a33323a226536336362336437336435303632343461343534306431343064633564373131223b733a33323a223534343731393536643433306435666536353533363434323134373462363634223b733a33323a223064303934613831623831333666346536373531393766303639333861626439223b733a33323a226434333730626265396136613931316534303031313039393132333134656662223b733a33323a223930333864363162383634363134393935643237376232653431393536616366223b733a33323a223138626639353863343864323266636233353264303836353732316431653335223b733a33323a223830393134613732313661326538636135303666363434363765376366326161223b733a33323a226535356630643832366637353966616264306465323535663436383330386330223b733a33323a226136623639323232636631656161343134646666626663343938626564663931223b733a33323a223462303138363835323661646432323232616461386134356562636137396163223b733a33323a223139636130376634313161633439646330343763376134353137656166663662223b733a33323a226135343061323163343236616237333130366133646132376632343466343833223b733a33323a223564663538626166393566343137353839333463376630646434333337313136223b733a33323a223665613933383735656638313739396233356464303062653130633933373564223b733a33323a223862316362666332323934626639303835656636336163373230616165396565223b733a33323a223935353061343564653365383964633837353465386266376635303965636465223b733a33323a226266613332623931373738653036653631653962356434336439336163666631223b733a33323a226663626131393666653137353736303961656233363137323263356137666661223b733a33323a223265666166313836346535653563613836636535343638636434616133663762223b733a33323a226639623630373239356430313438303430636464636132663961643466333935223b733a33323a223065636331653036626530396331323334386661386430316636646132616664223b733a33323a223565636363353564343162663665626436313766336538393764386433303264223b733a33323a223464636463663362663439613766633934393338626330323638643865366633223b733a33323a226563303666323738346630393935626534323765383361343730363464633165223b733a33323a226436346433616364646637643435663762396164313966663334376330373863223b733a33323a223136633464643163396231316236363462323735356331396465386432376566223b733a33323a226639656466306431633762386637313034336165663438393930363535326563223b733a33323a223139356663636461356662366661313662303230303861366162363037373030223b733a33323a223065376539613964666136363637623636333466373335333634393139623662223b733a33323a226236326431343434643562363234323535623764653263313961656234646262223b733a33323a223035633236343238393465643663346537313566323761636638393162373431223b733a33323a223330353962346338353531323162646266393839383538366465656565653361223b733a33323a223730393739383835376532626661633131396235366466663963363265653830223b733a33323a226265303331363837396636336665663665643961373136336638346631393962223b733a33323a226132306563626335636566396431613935323565333631343861643831316637223b733a33323a223366663431303566643034623364343638376264613464356166623837663637223b733a33323a223634386164366666353331313639333362313434623663376431313662303536223b733a33323a223766663834363937616563366536356362373138373836653034323832343234223b733a33323a226362653836623764393431613262633865323963393035646365656164396637223b733a33323a226533663736623433366431623862336262643730666630623339313064663163223b733a33323a226130396163663763613539666537313831363136366366613434373666646334223b733a33323a226236333363343537386638663461613233613433663339633162323866383435223b733a33323a223232636433356566326338633036666566653233646239336632366636373366223b733a33323a223631356435313132363064386464633133323137646335343562346237353636223b733a33323a226138326230343637643565386231616435353531353834613235653666393439223b733a33323a223634326466643063346161653363663565306135343730396234396638373138223b733a33323a226336316138653230396432333337363735633833363532363932653763636439223b733a33323a223232643733613034303137623137636437323038623163333339323466383033223b733a33323a226365626539356139376564313730333330383036613864643336373066373365223b733a33323a223236623033366532363261643661613330396630383632383166323438396132223b733a33323a223366336437346466366432333132663765353934653436353739393739366162223b733a33323a226264316133306663663238353439373431613735343536376362663333623738223b733a33323a223130356362343266356232313134373365663435383665373933333261626231223b733a33323a226233613639616664313738343437633137383762313036303932663662663963223b733a33323a226436623364653263316566353866616534333130376238383162336665326230223b733a33323a223762623064633132396633636132636535393835333533336330363561636563223b733a33323a223033303362633365613431363363616262326463373266376664373564313663223b733a33323a226363333131316238376162623362626337636432366161366462373735333734223b7d733a343a2268617368223b733a36353a2263633331313162383761626233626263376364323661613664623737353337342d3033303362633365613431363363616262326463373266376664373564313663223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a31303a7b733a33323a223834313834363766393532613636663963303932613435313964303663613137223b733a33323a223935396632343434353665316461393037346462303830663636373930373737223b733a33323a223130656433373237623232633162323963353263633762636635383137356538223b733a33323a223538376130343063363738633435363431383362343961653932316232343338223b733a33323a226634363332633061383561303632333365343064363636663165313936343938223b733a33323a223161346536646361303634303161393162656334356462646534376539333062223b733a33323a226636303663356666316239663334313031626232353933653331306137393938223b733a33323a226535393230343932656634313864333133333732636133643837363739356431223b733a33323a226333376233393364363331393335353962326632653131373332343864373262223b733a33323a226638383634623364616136633730333662636635356133326537313338666462223b733a33323a223964383064613166613131363234363637326637656330356330356331353962223b733a33323a223365356231346235356339356262616165343735323131663961393335353735223b733a33323a223762373463646265333261356266303264396265373331613732663865346363223b733a33323a223062306532336139656332383235376633323431626437613637333761303363223b733a33323a226336393164353264373930613730636266386633613739396533666564633762223b733a33323a223435343039663464346530666130343934323766316337396636353935666336223b733a33323a223831303034396437373066313061653832353833366465613630316130616664223b733a33323a223661303165663431353736613736393534646335366162363663376431323564223b733a33323a226136373633613338656361633066636236393938373665303437343332366236223b733a33323a223765656465633266653031633535626661336365373632616639346635386338223b7d733a343a2268617368223b733a36353a2237656564656332666530316335356266613363653736326166393466353863382d6136373633613338656361633066636236393938373665303437343332366236223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d, 1713894753);
 INSERT INTO `session` (`id`, `data`, `modified`) VALUES
 ('msd6vjk7d8ba0eplt7t5anmaum', 0x5f5f4c616d696e61737c613a363a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731333031393739332e3033323736323b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a226436716c69393939766474343773387072746763376e62386239223b7d733a34323a224c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333031383236313b7d733a35313a224c616d696e61735f56616c696461746f725f437372665f73616c745f666f72676f7470617373776f7264666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333031383234313b7d733a33323a224c616d696e61735f56616c696461746f725f437372665f73616c745f63737266223b613a313a7b733a363a22455850495245223b693a313731333032333338343b7d733a34343a224c616d696e61735f56616c696461746f725f437372665f73616c745f636f6e6669726d666f726d5f63737266223b613a313a7b733a363a22455850495245223b693a313731333032333339303b7d7d4f6d656b614d657373656e6765727c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a303a7b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f6c6f67696e666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a31303a7b733a33323a223533656632636337313837356133323163336234646565623061396137343039223b733a33323a226438373237626563616634633735643133666634623733336133333062363566223b733a33323a226131643332306562373537373633383663353061353464633662306136363035223b733a33323a223062633333646633623365633566643230633839353336343130333437653965223b733a33323a223738613764326230373734313733393138383666626531393732333333303166223b733a33323a226438636338643034653830356464656564303339383466333336656434663261223b733a33323a226136343935653235616231316162636463663564376637303931353237633837223b733a33323a226637303832666666336463623363316266616531353032353164306433383063223b733a33323a223261326166666264626235343334643965613333646330393632356532656138223b733a33323a223233623263663166313634653936313133666332313738373333323761383563223b733a33323a223930336466323966613038383438336531666231313439623433613833373731223b733a33323a226164333137613430626138366136316164306666396261616538633233313365223b733a33323a223439653934363064643937343933343233313364656133313837663734326233223b733a33323a226266663535306438356161663763313765613638663439336235333635363339223b733a33323a226530363462386531616532343138366134333439323462353335653530396436223b733a33323a226665336562373134393964356663636361633265366438393036623365663031223b733a33323a223030316331373235323163653765326365356630383061623736623634373334223b733a33323a226330326337643066643262656632623331646233306339363639313432336535223b733a33323a223132633765386664363030633861323833633736393163636132636532343262223b733a33323a226465613663663435613162636632316361396133663461323638306436376361223b7d733a343a2268617368223b733a36353a2264656136636634356131626366323163613961336634613236383064363763612d3132633765386664363030633861323833633736393163636132636532343262223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f666f72676f7470617373776f7264666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a343a7b733a33323a223464613235623237326233623433393936346565353532346532313435363662223b733a33323a223764363265623335643830643930653934376165393735636565303539343531223b733a33323a226438366266653031643739346330623236643265656561326639656566373561223b733a33323a226463613662303862643263643161393333346530356236646261343632616537223b733a33323a223237653962346231623634353832313532386265343666346530376564313433223b733a33323a223734396161633464663965363131376537323164663462643536653730643639223b733a33323a223163383434663263386230613432646131613433623436333334343335633437223b733a33323a226231333962653764376536363338643963356665333535353431303034353363223b7d733a343a2268617368223b733a36353a2262313339626537643765363633386439633566653335353534313030343533632d3163383434663263386230613432646131613433623436333334343335633437223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d72656469726563745f75726c7c733a32363a22687474703a2f2f6c6f63616c686f73742f7370642f61646d696e223b4c616d696e61735f417574687c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a313a7b733a373a2273746f72616765223b693a343b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a3132323a7b733a33323a223537343066316639323139363131343161366630383331653863393034646634223b733a33323a226261643430623633303238646431353236373837653131393438643439663062223b733a33323a226161633432333139363332663334666238323662633663363036633332666161223b733a33323a226334623032393562363139303535656666396563373036366534613732666265223b733a33323a223365623036646464396462643234303037343861623235316436643035313163223b733a33323a223565376333663538616239613865623437626334396337323230643331326531223b733a33323a226434343034323230383361643763613537363836633031383065663161346535223b733a33323a223862613066313265386664366661626439396531663736316166303965623937223b733a33323a226339313531346436623634366231373462303164613039306466326238306233223b733a33323a223263626462323539396232363864383562656430646464376436663531653261223b733a33323a223961613432356132323862333435336166323433343434623235303034383236223b733a33323a223961303562316562316336613737623235316562313034623866363362656135223b733a33323a223539323163376634363563613739346562326632373836353764373635373364223b733a33323a223733356332623366326365666662323531613663633735363364303661336561223b733a33323a223730646339383464353030333763663332306531386539343762366637326463223b733a33323a223366376465396531646237636534306137393064323734386236336362346534223b733a33323a223234323936333035343762393866636261323065313563643132313135313661223b733a33323a223163353663643539616464363333353637363538383364396233353562613834223b733a33323a226333386336333866303339613336656637613163653461613963303735656266223b733a33323a226164616265373739313263363834666666303036363535323836353162666166223b733a33323a223739656633306439616431383265323538313936643238363633313538386632223b733a33323a223662613534323964306566646138326332663631636536613466613630666338223b733a33323a226263316339623037653065633264326438343634616235366166323139653931223b733a33323a223430356565333934663063373363333733333038373535343739316636333430223b733a33323a223462376561373537326435623839306631653065343830643132383865656134223b733a33323a223066626438316433343432663133343632383435656631316530333339336538223b733a33323a223464323130313763313734386238383636373631363531633034623561613538223b733a33323a223738363638386231623332623935666339636636306564396337353638393030223b733a33323a226338376262656537663432643730313764656132326365623934303362666236223b733a33323a226339653733356430613831306433373666363035646336313963626635313633223b733a33323a223961373964333066303364613465396536636564366336336362643033303435223b733a33323a223063313930313230623139306530313732313531346437333762643738613834223b733a33323a226264336437333838666533316465356330363630383634386664373730353265223b733a33323a223932333763666232353731356235646366613135636663343031333938373936223b733a33323a223937323463643034653531313635363566363334376133393230643731306361223b733a33323a226630363265303936393336646263316236356437376530393961623532366538223b733a33323a223764326363323966386238376234613464626262663631336435306439356634223b733a33323a223539396332303061383330613737333234313463306637656336373639376136223b733a33323a226134353136386234336661386634396561336332366137613265326564353634223b733a33323a223963306465346239323134333463643361613430663133373035663535656338223b733a33323a223866643230666130626239383365383838653339383139376333346163356436223b733a33323a226139396135316431656164616636313739363062626262616430356236636164223b733a33323a226230303631346433383565613033306464333264613365656436396162396332223b733a33323a223064366332613263633737613637623531656532306561663630666535323635223b733a33323a223437363434306431323232653730343264636562393636363739376261303263223b733a33323a223265393738363764336533383863303734376162353935343262333335656532223b733a33323a223338363631653730363134343033396466653663316436303861646634366666223b733a33323a223466613530363331393533376666333962323834376530306436656639316334223b733a33323a223536373132396131373034633837373733663862383837313235646161376530223b733a33323a223964326531666630303234616361623338653234393230636365656436393532223b733a33323a226366336632646361363436373936313264306637616138343165666131366430223b733a33323a223332356538383031346334303530323961336231643761656236316466643634223b733a33323a223562363563333234336663373335623634653231356232373635386236303835223b733a33323a223562316466353164626261376165616163326639373633306638376336663661223b733a33323a226165653431353365333830336663383161613930336466346538636137386536223b733a33323a223032643239303665326363303736626634333933313737323330643230623331223b733a33323a223331643731396430616165313662363162343230363166646339313639623563223b733a33323a223937363663653365326131646135323839616663393162643232623064383230223b733a33323a223935336339633365313931303035373231393935313834313162353236326463223b733a33323a223932363239646164666562396639616239613330663838656134343961626332223b733a33323a223366646633613236336537643664373530373432313739303237656366643737223b733a33323a226437616565373862613761383833393931663530623038366266633037623433223b733a33323a223039646635343936616264373339353733386336363462326236303831623134223b733a33323a223037646465333361363034643831343735303935616261366563613632333233223b733a33323a223363656635613361653933303637383164306164396538363361653434616366223b733a33323a226339643866396638663732396635633462396435623862626437363935383862223b733a33323a223236643734343633396634366234323137633138396636616630346138393636223b733a33323a223062356530613130616430393466613462373130633330303763343963323961223b733a33323a223837353233643862653163613461623931326666333833373930366464663335223b733a33323a223965396330653935643732333839623236383166633165316661326134376464223b733a33323a223434373137386138353633303264653337373739326431383933626231633362223b733a33323a223864363039306338623237373566616131393832623465383665373830386535223b733a33323a223933383935343362323262373735343265346130376638373433393731623765223b733a33323a226131613837313238303932313931313236396230636265373961376333306434223b733a33323a223135623364616563663232313363613033303430646237613934633361356466223b733a33323a223837363634626639613035303663396564313264643166383062616463643635223b733a33323a223231376161303031623561633731333830376362666462396337653335323761223b733a33323a223237643539376632303866336561353339656432333137623436366364613163223b733a33323a223865363863393333373436633663323964303338326138343930356132333666223b733a33323a226231386636346535303235663566396463396236613537383565383133346234223b733a33323a223265333438316666326565666266313731386236366234663866393635393463223b733a33323a223837663961333133356135383532326230343932363266313464343135666433223b733a33323a223966323732643231303061356330626363316466633932616564363764326538223b733a33323a226434343461346530623638633561626236663033633937613437656333643139223b733a33323a223762643831363365613335333130623466353436383263653463333863343434223b733a33323a223335393534386133396135633762333439393663303631646361613531613566223b733a33323a226134333164646538306333323864356437316634303166346663663136326531223b733a33323a223337306239656535663232333936366638636363396135363437653733616435223b733a33323a223865333938346639386261626431636331366436623137383830323335643034223b733a33323a226466333561393461356164663332356464396464633937353131626530623334223b733a33323a226130663833306161626333363432326335623666333736663862363561383261223b733a33323a223634366239326530626665303361343334333066666663613764336136323066223b733a33323a223462386266303162356234653639313463396138373563643835636533626465223b733a33323a223661396232613835363930663130306333333462316566303436306334373138223b733a33323a223163343335656439636135353934663361326339356131343338333133303061223b733a33323a226562303838343063323761383631333433363162313861323864353563633465223b733a33323a226565613634366534373465306438333833396661343365353565323662383532223b733a33323a223562633266333337646132663632306534623131343939336162636135333832223b733a33323a223064353964653964383930633061613435656631383464383234636534656634223b733a33323a223664336530363934303333613830636239373764663161363439313639623931223b733a33323a226533383362303766353733653139313761663262393133356637333139346563223b733a33323a226131333137613238353736343566316565626665303633663062616432366633223b733a33323a223964353731326536646237383362653732613236643132666363383063396133223b733a33323a223539343237623033663966393962363663336635343665333632623031346365223b733a33323a226363323431333237353730633134333030343461653738656361623636313266223b733a33323a226131616638323437663738663837326363643861336666393533636165343434223b733a33323a226662393139333666376563643537326336386433353362346636346464313234223b733a33323a223766363534613764636566623263393235323165313636633335366664323538223b733a33323a226432353136643563316364653434666234366633653135643437326635303235223b733a33323a226433636665333631353535373531303435643730313738323135366630633862223b733a33323a223766636361336561396335333362623635666332326231643934393636663832223b733a33323a223637613662643761393136323736623635376539306466653764386238383265223b733a33323a223765646330323931616265653632353339333636396138393335396331666164223b733a33323a223662383061353961633632383032653535353966333937393961346333343933223b733a33323a226264643765323537633536353565353162343966383534643064656137323864223b733a33323a223364396233356462626330326132666437353136333735313531383239663033223b733a33323a223662633734613638323266343739343665383230383035643361383461306264223b733a33323a226163663430353433383636613331623131353431626465373431633936383461223b733a33323a223365393131353761343764336261363136656464306238353830396532643239223b733a33323a223336366237666137616165626164363034333632353366393266623063356330223b733a33323a223336393661663734356164636634323161343732306231356230633434653033223b733a33323a226437623931313435323965346330383161633839333636613961613537643332223b733a33323a223531333534663034313961626366616365323939306562373630393864616139223b733a33323a223235373765353133373162663639666162343434613566613138643235343361223b733a33323a223636356533363631663731316635393231653462376333373661393834313362223b733a33323a226538363336343635633535616234303838343736646166366234316266356238223b733a33323a223539613761663231356231613964666533386364626564353139653133626439223b733a33323a223635643862393432396665386239333136363330623533376335346137643264223b733a33323a223133306335326437323863356365383833323339373538623637363331346261223b733a33323a226138306536646632626333356464333066323165643839356630653565353661223b733a33323a226666396263643139646639663463363938633436376432366561303531643034223b733a33323a226366626432306664333239363935663261333530623331353963316265393332223b733a33323a223038623234303361653136643935343338393232353561353861363033616338223b733a33323a226164336139343035613733386130303430623936626532653738383235393962223b733a33323a223133383139636232306466613636383466313166376466646536656639373539223b733a33323a226665373264353138366162393834333131306230616136323065353062653433223b733a33323a226561626630633430623230393231626566613039386138636636326239306361223b733a33323a223531373861326564323631616435326438386338336232396132323666636262223b733a33323a226639343132363530643161653130633562313030633565613663636230656131223b733a33323a226231646335333561363064646335373034323638373037353039616165383839223b733a33323a223739653061313132346266393732656463626637383561616361653762306333223b733a33323a223439383830303230616365626532303365303339396465323537383837666433223b733a33323a226366613362653734656662636462633939656537623565623337393761623831223b733a33323a223264616237646236316537663663623562393033373065376131656337363039223b733a33323a223532376364663564636361366161643432303530313034653766386462643333223b733a33323a226330613830336231626633363733396138636339373031623864323165323861223b733a33323a226337343537653230313861636632376662633236623662653961636530643564223b733a33323a226566646430336536636435383366613038633531303934333037383131643638223b733a33323a223665376238376466303134363333636130633366636231633730326163636631223b733a33323a223064653262623535303731623835653938613961656135373735616366363462223b733a33323a223761316333356532306332363034373832343462373762343234393439383636223b733a33323a223233633630373030386232386338636266613562323466343862383765303134223b733a33323a223332356538303164646136386261656133666238663233666432396465386163223b733a33323a223433393133633733383737366262646532663936346362383537323635326662223b733a33323a223862636131366533626239633833353766323837306135326266363062646237223b733a33323a223837386335653532316265353935616438393432393239636130666432343835223b733a33323a226439646466323435636465326139613936633031323034366466383562643639223b733a33323a223238316638636565383866353036343939353664313766363830653934666235223b733a33323a223737356232383739393564646538303936346665353431336463323934306331223b733a33323a223530636230323566653630303265363133386164653164383730333132653830223b733a33323a223636643439646239633938653666643564326166313166356236303761343533223b733a33323a223864393332633033353039393061313837343664336132386665623239646230223b733a33323a223334633239306664613636396639333366303033306234373064333633343563223b733a33323a226137346262326330346161353635376335313361623537376536316232666132223b733a33323a223465343937376236626636633266616161663136663739643332663235646634223b733a33323a223461663936373730346537366465663834623833363835626664333238313139223b733a33323a223631333237373730613463643364303135643935333933393632636539656366223b733a33323a226264633035626363346637623935373566343837376262346530373365376564223b733a33323a226265356636303439613730303133653533313838306337646333636562636133223b733a33323a226461353164363631396466643465663166666162386439363836303264376265223b733a33323a223465633964376134646561353831366432366564356665653936623330363531223b733a33323a223366643134393262636366353134316636336134376536653632643462356233223b733a33323a226138623965663831353635373165616563343665366539653161343930363231223b733a33323a226437613236646537623164333964646434393062393064376132356537353665223b733a33323a223063393537373232333739323263356565396162383636656535313838376437223b733a33323a223364633839353739386332656430336663643565366437313530663565363166223b733a33323a223231366239666538386536303066303461366431363930386235616439363535223b733a33323a226638306437346232396264666636393836353735653865366435336366393466223b733a33323a223930373533646430656635633236393035653630363939656163646430616435223b733a33323a223839613963303030316161343332623835303937346138376164366632343433223b733a33323a226232636335303264396162656639353135333330396536396263313164613231223b733a33323a226665323766643565303731373434343936613031303266333166626130633837223b733a33323a223235333064316362636535333932613664373162313861633531373031613363223b733a33323a226333346136636361396633616135633934636439636637646535333332373563223b733a33323a223066643762333130613535646539373064313362323964623731623931626437223b733a33323a223536616565643730653731373966646334653831363963373032666231346534223b733a33323a223838396133376231313464643565643663643735333931363234353039616366223b733a33323a223561316132623935303538616365326638393764383561313066333262653134223b733a33323a226331303363363139646464323831313562666566623333396137363261383634223b733a33323a226265343031656162343831306164326261663365623562396464623965623335223b733a33323a226236316536326236306364393961323163376239316664626636366539376232223b733a33323a223833613664323263326637346639313837316666333738396266376366623165223b733a33323a226333356361353563343162373137613566646661633465343437656530363530223b733a33323a223062333864653663343736353664656536303832666634333937343739646432223b733a33323a223165363263386463383233346235613665383734383032636663316164336438223b733a33323a226138386339626463326630363031306138643761396432623434313164303936223b733a33323a226435346236663938323464313762313639633264313137626337616433353963223b733a33323a226564356161396339316138363433363932366130366561326535383631643334223b733a33323a223434656362333133363236653565366431623437346431336436306139636562223b733a33323a223630313365333465626332353536666565333635376330646132633966653133223b733a33323a226239613062323739373430306564653064323731363439386263623064333531223b733a33323a223265383632636262633230333631306535323666323363626639353333393066223b733a33323a223961393763343863326133626133643363393231326566353830313537383133223b733a33323a226662326337373435356466313463323235636262303633623036643033316139223b733a33323a223162643239653737636362396462373339303836323665613235636262386433223b733a33323a223166386663303335663566353435623166663035616464306331336335323339223b733a33323a223433373536333835646266356266373762373966346663336361646666613431223b733a33323a226661643539333534656339666134393634656166393631346164386361376630223b733a33323a223264653961363439363830616136376336643165333936643833623335343435223b733a33323a223932373266623064623136626233623431353964626532373539393866663434223b733a33323a226135373330303563336665393030663664623465623632363031363038313764223b733a33323a226364383837303234613566306238306439613966653335366432613139623737223b733a33323a223638363035393566653937643462643234663934343230663665373434626234223b733a33323a226565623163303765363465613763376162356666353237333639323463623638223b733a33323a226335343930363563636534383365636630333361393934313038396566666435223b733a33323a223965656663666336303530663030623165306332653039666531646539616333223b733a33323a223035363539356239656535313664626536356166613362383432316334393766223b733a33323a226664646361626136303963663232393537373832363733386166653136323839223b733a33323a223930356664353036653935383436366439303135646637636531343261383635223b733a33323a226161663632366537303165353765613433336164623737626539306564373435223b733a33323a223262653439623161366237363339313063393231623530376633633564626464223b733a33323a223235316462316538356564646539653164366233313335376437663536613931223b733a33323a223336333836376139353335333438396437313665363232336665396265333463223b733a33323a226436343431633865663333323931303232626661363663306233616137383539223b733a33323a223534376563333130386363303537343465366265646231303039613933393238223b733a33323a223933656661643136623836643764663666333335623737363132656164363061223b733a33323a226338333632653439396333636331383762326462663736326138313862656433223b733a33323a223762373232636531666438353966356162623136356235316535343463343633223b733a33323a223636366561346331353536646638323034353162616631356664653138383436223b733a33323a226664656561306562363366303663323361306135626634636136303866633038223b733a33323a223539653236383266613864316433313561643161316333666632643032396639223b733a33323a226132303539623138643633333663316332626438313035383365316639643134223b733a33323a223138636361383331353563393639633230383663373065666236336334373334223b733a33323a226562663134323138643463313530306336313637623564363034613737616631223b733a33323a223761363864656561303337353937633731396634626438343766646236346539223b733a33323a226566316533616636643966663263323135653837636432313662393162393661223b733a33323a226466333930646234383165306164373664346661366330613135633938316361223b733a33323a223531363937623138393564373834663365336539376135373065633631656464223b733a33323a223563383038646239636338393235383435353833636135303432303231343132223b733a33323a223735336665373666343565363464613661653862383239303332616263353136223b733a33323a223266633935613332643961336366623563336361643530363134356236346363223b733a33323a223163326132626537346430616566643938326430393139376531326235303664223b733a33323a226437356464663037393336346136656338343264383235623332666639396564223b733a33323a223533643539336132333137653462336662313065326534623230376662383962223b7d733a343a2268617368223b733a36353a2235336435393361323331376534623366623130653265346232303766623839622d6437356464663037393336346136656338343264383235623332666639396564223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d4c616d696e61735f56616c696461746f725f437372665f73616c745f636f6e6669726d666f726d5f637372667c4f3a32363a224c616d696e61735c5374646c69625c41727261794f626a656374223a343a7b733a373a2273746f72616765223b613a323a7b733a393a22746f6b656e4c697374223b613a31323a7b733a33323a223264313731356662303833353664303834383361316365663965303333306530223b733a33323a226130366163323232663732653531333461636265666132623730336361366566223b733a33323a223565326365326232303766366232636432383735386638643634396131363266223b733a33323a226338653363633462303063383838303038346432633237646461326365353362223b733a33323a223231323432323463373339663134326638383963663339653631336464306237223b733a33323a226661396163366136623438306237306332323961303836333335633163613633223b733a33323a223438383633303462653439363635656161343462383038316434663138393564223b733a33323a223134356335666331613339643061316561366465626139616665333332373433223b733a33323a223365376530363430313737393736653438623961616535363933373935346231223b733a33323a223966656230386433326336616231373334363733653434656563333964373266223b733a33323a223930306637326162363364366432343138303366396561383239303634663062223b733a33323a223338343765363238636337386632373666656233336532643531323938363338223b733a33323a226238313635303761623565376437363633306263383966663030646134663731223b733a33323a223465303838333230633866646635636462666338636163336138663231613761223b733a33323a223663313263343235633430316566653462646562323162386437626433333333223b733a33323a223538333939303737663863383232663233363735643233636465353732653465223b733a33323a223562663564353734616336333962646365376665663164623837343961663361223b733a33323a223531373033663734646533616164636434626566363631643333393261316134223b733a33323a223231613433346432386539663037623833643862366465396437333537656235223b733a33323a223365613339376432666433313831646630663030623131336162663531656136223b733a33323a223034396239396135656264613638336164353132336439663866616363633362223b733a33323a226364666462366266393931323638623938653337363162393336666132313930223b733a33323a226334656135623466393061363837363233343139633066363966626430303665223b733a33323a223234313331393766663139313533313839346639393136393339383866643432223b7d733a343a2268617368223b733a36353a2232343133313937666631393135333138393466393931363933393838666434322d6334656135623466393061363837363233343139633066363966626430303665223b7d733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b733a31333a2241727261794974657261746f72223b733a31393a2270726f74656374656450726f70657274696573223b613a343a7b693a303b733a373a2273746f72616765223b693a313b733a343a22666c6167223b693a323b733a31333a226974657261746f72436c617373223b693a333b733a31393a2270726f74656374656450726f70657274696573223b7d7d, 1713019793),
 ('n0f0f7bsmke66u0g8v7681rup1', 0x5f5f4c616d696e61737c613a323a7b733a32303a225f524551554553545f4143434553535f54494d45223b643a313731323535303434302e3134323137383b733a363a225f56414c4944223b613a313a7b733a32383a224c616d696e61735c53657373696f6e5c56616c696461746f725c4964223b733a32363a226e306630663762736d6b65363675306738763736383172757031223b7d7d, 1712550440),
@@ -806,8 +899,8 @@ INSERT INTO `session` (`id`, `data`, `modified`) VALUES
 --
 
 CREATE TABLE `setting` (
-  `id` varchar(190) NOT NULL,
-  `value` longtext NOT NULL COMMENT '(DC2Type:json_array)'
+  `id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -849,12 +942,12 @@ CREATE TABLE `site` (
   `thumbnail_id` int(11) DEFAULT NULL,
   `homepage_id` int(11) DEFAULT NULL,
   `owner_id` int(11) DEFAULT NULL,
-  `slug` varchar(190) NOT NULL,
-  `theme` varchar(190) NOT NULL,
-  `title` varchar(190) NOT NULL,
-  `summary` longtext DEFAULT NULL,
-  `navigation` longtext NOT NULL COMMENT '(DC2Type:json_array)',
-  `item_pool` longtext NOT NULL COMMENT '(DC2Type:json_array)',
+  `slug` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `theme` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `summary` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `navigation` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)',
+  `item_pool` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)',
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL,
   `is_public` tinyint(1) NOT NULL,
@@ -879,7 +972,7 @@ CREATE TABLE `site_block_attachment` (
   `block_id` int(11) NOT NULL,
   `item_id` int(11) DEFAULT NULL,
   `media_id` int(11) DEFAULT NULL,
-  `caption` longtext NOT NULL,
+  `caption` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -912,8 +1005,8 @@ CREATE TABLE `site_item_set` (
 CREATE TABLE `site_page` (
   `id` int(11) NOT NULL,
   `site_id` int(11) NOT NULL,
-  `slug` varchar(190) NOT NULL,
-  `title` varchar(190) NOT NULL,
+  `slug` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_public` tinyint(1) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
@@ -951,8 +1044,8 @@ INSERT INTO `site_page` (`id`, `site_id`, `slug`, `title`, `is_public`, `created
 CREATE TABLE `site_page_block` (
   `id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
-  `layout` varchar(80) NOT NULL,
-  `data` longtext NOT NULL COMMENT '(DC2Type:json_array)',
+  `layout` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)',
   `position` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -993,7 +1086,7 @@ CREATE TABLE `site_permission` (
   `id` int(11) NOT NULL,
   `site_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `role` varchar(80) NOT NULL
+  `role` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1010,9 +1103,9 @@ INSERT INTO `site_permission` (`id`, `site_id`, `user_id`, `role`) VALUES
 --
 
 CREATE TABLE `site_setting` (
-  `id` varchar(190) NOT NULL,
+  `id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `site_id` int(11) NOT NULL,
-  `value` longtext NOT NULL COMMENT '(DC2Type:json_array)'
+  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1056,12 +1149,12 @@ INSERT INTO `site_setting` (`id`, `site_id`, `value`) VALUES
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `email` varchar(190) NOT NULL,
-  `name` varchar(190) NOT NULL,
+  `email` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL,
-  `password_hash` varchar(60) DEFAULT NULL,
-  `role` varchar(190) NOT NULL,
+  `password_hash` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_active` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1079,9 +1172,9 @@ INSERT INTO `user` (`id`, `email`, `name`, `created`, `modified`, `password_hash
 --
 
 CREATE TABLE `user_setting` (
-  `id` varchar(190) NOT NULL,
+  `id` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` int(11) NOT NULL,
-  `value` longtext NOT NULL COMMENT '(DC2Type:json_array)'
+  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '(DC2Type:json_array)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1111,11 +1204,11 @@ CREATE TABLE `value` (
   `resource_id` int(11) NOT NULL,
   `property_id` int(11) NOT NULL,
   `value_resource_id` int(11) DEFAULT NULL,
-  `type` varchar(190) NOT NULL,
-  `lang` varchar(190) DEFAULT NULL,
+  `type` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lang` varchar(190) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `value_annotation_id` int(11) DEFAULT NULL,
-  `value` longtext DEFAULT NULL,
-  `uri` longtext DEFAULT NULL,
+  `value` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uri` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_public` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1132,7 +1225,7 @@ INSERT INTO `value` (`id`, `resource_id`, `property_id`, `value_resource_id`, `t
 (10, 3, 1, NULL, 'literal', NULL, NULL, 'Articolo La Nazione giugno 1991', NULL, 1),
 (11, 5, 1, NULL, 'literal', NULL, NULL, 'XML', NULL, 1),
 (12, 6, 10, NULL, 'literal', '', NULL, 'B. 10 J. 95', NULL, 1),
-(13, 6, 1, NULL, 'literal', '', NULL, 'Primo Fascicolo', NULL, 1),
+(13, 6, 1, NULL, 'literal', '', NULL, 'Fascicolo 1', NULL, 1),
 (14, 6, 4, NULL, 'literal', '', NULL, 'Supporto:\nIl fascicolo cartaceo è composto da 6 pagine totali, compresa la copertina del fascicolo.\n\n', NULL, 1),
 (15, 6, 4, NULL, 'literal', '', NULL, 'Condizioni del documento:\nLe pagine si presentano in un ottimo stato di conservazione, solamente la carta appare leggermente ingiallita. Sia le scritte a macchina che a mano, ma anche i timbri sono facilmente comprensibili.\n\n', NULL, 1),
 (16, 6, 4, NULL, 'literal', '', NULL, 'Firme:\nNel testo si possono trovare varie firme (se ne contano 6). Inoltre, sono presenti i numeri dei protocolli di telegrafo scritti a mano, per un totale di 9 diverse grafie', NULL, 1),
@@ -1145,14 +1238,91 @@ INSERT INTO `value` (`id`, `resource_id`, `property_id`, `value_resource_id`, `t
 (23, 6, 14, NULL, 'literal', '', NULL, 'Roma', NULL, 1),
 (24, 6, 14, NULL, 'literal', '', NULL, 'Archivio Marina Militare', NULL, 1),
 (25, 6, 7, NULL, 'literal', '', NULL, ' 18 marzo 1960 ', NULL, 1),
-(26, 6, 7, NULL, 'literal', '', NULL, '9 Gennaio 1961', NULL, 1),
+(26, 6, 7, NULL, 'literal', '', NULL, '9 gennaio 1961', NULL, 1),
 (27, 6, 7, NULL, 'literal', '', NULL, '7 febbraio 1961', NULL, 1),
 (28, 7, 1, NULL, 'literal', NULL, NULL, 'Pagina 1 ', NULL, 1),
 (29, 8, 1, NULL, 'literal', NULL, NULL, 'Pagina 2', NULL, 1),
 (30, 9, 1, NULL, 'literal', NULL, NULL, 'Pagina 3', NULL, 1),
 (31, 10, 1, NULL, 'literal', NULL, NULL, 'Pagina 4', NULL, 1),
 (32, 11, 1, NULL, 'literal', NULL, NULL, 'Pagina 5', NULL, 1),
-(33, 12, 1, NULL, 'literal', NULL, NULL, 'Pagina 6', NULL, 1);
+(33, 12, 1, NULL, 'literal', NULL, NULL, 'Pagina 6', NULL, 1),
+(34, 13, 10, NULL, 'literal', '', NULL, 'B. 15 J. 140', NULL, 1),
+(35, 13, 1, NULL, 'literal', '', NULL, 'Fascicolo 2', NULL, 1),
+(36, 13, 4, NULL, 'literal', '', NULL, 'Supporto:\nIl fascicolo di materialecartaceo è composto da 8 pagine totali, compresa la copertina del fascicolo.', NULL, 1),
+(37, 13, 4, NULL, 'literal', '', NULL, 'Condizioni del documento:\nLe pagine si presentano in un ottimo stato di conservazione, solamente alcune di esse appaiono leggermente ingiallite. In generale, sono facilmente comprensibili sia le scritte effettuate a macchina a mano, come ad esempio le firme.', NULL, 1),
+(38, 13, 4, NULL, 'literal', '', NULL, 'Firme\nIl testo contiene varie firme, per un totale di 6. Inoltre, sono presenti i numeri dei protocolli del telegrafo scitti a mano, permettendo di osservare 9 diverse grafie.', NULL, 1),
+(39, 13, 8, NULL, 'literal', '', NULL, 'Testo', NULL, 1),
+(40, 13, 26, NULL, 'literal', '', NULL, 'Documento battuto a macchina', NULL, 1),
+(41, 13, 9, NULL, 'literal', '', NULL, 'Cartaceo', NULL, 1),
+(42, 13, 51, NULL, 'literal', '', NULL, 'Ministero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 9 maggio 1952', NULL, 1),
+(43, 13, 51, NULL, 'literal', '', NULL, 'Comando in Capo del Dipartimento Marittimo dell\'Alto Tirreno, Ufficio Tecnico, La Spezia, 28 maggio 1952', NULL, 1),
+(44, 13, 51, NULL, 'literal', '', NULL, 'Ministero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 17 agosto 1951', NULL, 1),
+(45, 13, 51, NULL, 'literal', '', NULL, 'Reparto Ufficio Storico, Roma, 12 agosto 1952', NULL, 1),
+(46, 13, 51, NULL, 'literal', '', NULL, 'Ministero della Difesa Marina, Ufficio del Segretario Generale Coordinamento, Roma, 9 agosto 1951', NULL, 1),
+(47, 13, 51, NULL, 'literal', '', NULL, 'Comando in Capo del Dipartimento Marittimo dell\'Alto Tirreno, Ufficio Tecnico, La Spezia, 4 agosto 1951', NULL, 1),
+(48, 13, 51, NULL, 'literal', '', NULL, 'Comune della Spezia, Segreteria Generale, La Spezia, 23 luglio 1951', NULL, 1),
+(49, 13, 14, NULL, 'literal', '', NULL, 'Roma', NULL, 1),
+(50, 13, 14, NULL, 'literal', '', NULL, 'Archivio Marina Militare', NULL, 1),
+(51, 13, 7, NULL, 'literal', '', NULL, '17 agosto 1951', NULL, 1),
+(52, 13, 7, NULL, 'literal', '', NULL, '23 luglio 1951', NULL, 1),
+(53, 13, 7, NULL, 'literal', '', NULL, '4 agosto 1951', NULL, 1),
+(54, 13, 7, NULL, 'literal', '', NULL, '9 agosto 1951', NULL, 1),
+(55, 13, 7, NULL, 'literal', '', NULL, '9 maggio 1952', NULL, 1),
+(56, 13, 7, NULL, 'literal', '', NULL, '28 maggio 1952', NULL, 1),
+(57, 13, 7, NULL, 'literal', '', NULL, '12 agosto 1952', NULL, 1),
+(58, 14, 1, NULL, 'literal', NULL, NULL, 'Pagina 1', NULL, 1),
+(59, 15, 1, NULL, 'literal', NULL, NULL, 'Pagina 2', NULL, 1),
+(60, 16, 1, NULL, 'literal', NULL, NULL, 'Pagina 3', NULL, 1),
+(61, 17, 1, NULL, 'literal', NULL, NULL, 'Pagina 4', NULL, 1),
+(62, 18, 1, NULL, 'literal', NULL, NULL, 'Pagina 5', NULL, 1),
+(63, 19, 1, NULL, 'literal', NULL, NULL, 'Pagina 6', NULL, 1),
+(64, 20, 1, NULL, 'literal', NULL, NULL, 'Pagina 7', NULL, 1),
+(65, 21, 1, NULL, 'literal', NULL, NULL, 'Pagina 8', NULL, 1),
+(66, 22, 1, NULL, 'literal', '', NULL, 'Documenti relativi alla statua di Costanzo Ciano', NULL, 1),
+(67, 22, 4, NULL, 'literal', '', NULL, 'Conservazione:\nUfficio storico della Marina Militare', NULL, 1),
+(68, 22, 4, NULL, 'literal', '', NULL, 'Data:\naprile 2024', NULL, 1),
+(69, 22, 4, NULL, 'literal', '', NULL, 'I documenti sono stati raccolti dall\'archivio della Marina Militare. Raccontano degli spostamenti della statua dal suo basamento originale in piazza a La Spezia, fino al Castello di San Giorgio. Secondo gli ultimi documenti la statua è stata collocata definitivamente al Museo Tecnico Navale di La Spezia.', NULL, 1),
+(70, 22, 8, NULL, 'literal', '', NULL, 'Testo', NULL, 1),
+(71, 22, 26, NULL, 'literal', '', NULL, 'Documenti battuti a macchina', NULL, 1),
+(72, 22, 9, NULL, 'literal', '', NULL, 'Supporto:\nFogli di carta. Il fascicolo cartaceo è composto da 6 pagine totali, compresa la copertina del fascicolo. Il fascicolo di materiale cartaceo è composto da 8 pagine totali , compresa la copertina del fascicolo. Il fascicolo cartaceo è composto da 14 pagine totali, compresa la copertina del fascicolo.', NULL, 1),
+(73, 22, 9, NULL, 'literal', '', NULL, 'Estensione:\n6 + 8 + 14 pagine', NULL, 1),
+(74, 22, 9, NULL, 'literal', '', NULL, 'Condizioni:\nIl testo non presenta cancellature, ma timbri, firme e la carta si presenta ingiallita.', NULL, 1),
+(75, 22, 9, NULL, 'literal', '', NULL, 'Pagine:\nLe pagine sono lunghe in media tra le 28 e 50 righe, considerando anche timbri e firme.', NULL, 1),
+(76, 22, 9, NULL, 'literal', '', NULL, 'Mani:\nLe pagine dei documenti sono scritte a macchina (Marina Militare di Venezia); sono riportati a mano numeri di protocollo e firme.', NULL, 1),
+(77, 22, 14, NULL, 'literal', '', NULL, 'Roma', NULL, 1),
+(78, 22, 14, NULL, 'literal', '', NULL, 'Archivio Marina Militare', NULL, 1),
+(79, 23, 10, NULL, 'literal', '', NULL, 'B. 18 f. 165', NULL, 1),
+(80, 23, 1, NULL, 'literal', '', NULL, 'Fascicolo 3', NULL, 1),
+(81, 23, 4, NULL, 'literal', '', NULL, 'Supporto\nIl fascicolo cartaceo è composto da 14 pagine totali, compresa la copertina del fascicolo.', NULL, 1),
+(82, 23, 4, NULL, 'literal', '', NULL, 'Condizioni del documento\nLe pagine si presentano in un ottimo stato di conservazione, in alcune di esse la carta appare leggermente ingiallita. Sia le scritte a macchina che a mano, ma anche i timbri sono facilmente comprensibili. Come lo schizzo della statua stessa', NULL, 1),
+(83, 23, 4, NULL, 'literal', '', NULL, 'Firme\nNel testo si possono trovare varie firme (se ne contano 6). Inoltre, sono presenti i numeri dei protocolli di telegrafo scritti a mano, per un totale di 9 diverse calligrafie.', NULL, 1),
+(84, 23, 8, NULL, 'literal', '', NULL, 'Testo', NULL, 1),
+(85, 23, 26, NULL, 'literal', '', NULL, 'Documento battuto a macchina', NULL, 1),
+(86, 23, 9, NULL, 'literal', '', NULL, 'Cartaceo', NULL, 1),
+(87, 23, 51, NULL, 'literal', '', NULL, 'Roma, 12 marzo 1970', NULL, 1),
+(88, 23, 51, NULL, 'literal', '', NULL, 'Ufficio Storico M.M., Roma, 12 marzo 1970', NULL, 1),
+(89, 23, 51, NULL, 'literal', '', NULL, 'Roma, 6 marzo 1970', NULL, 1),
+(90, 23, 51, NULL, 'literal', '', NULL, 'Ufficio Storico M.M., Roma, 5 marzo 1970', NULL, 1),
+(91, 23, 14, NULL, 'literal', '', NULL, 'Roma', NULL, 1),
+(92, 23, 14, NULL, 'literal', '', NULL, 'Archivio Marina Militare', NULL, 1),
+(93, 23, 7, NULL, 'literal', '', NULL, '5 marzo 1970', NULL, 1),
+(94, 23, 7, NULL, 'literal', '', NULL, '6 marzo 1970', NULL, 1),
+(95, 23, 7, NULL, 'literal', '', NULL, '9 marzo 1970', NULL, 1),
+(96, 23, 7, NULL, 'literal', '', NULL, '12 marzo 1970', NULL, 1),
+(97, 24, 1, NULL, 'literal', NULL, NULL, 'Pagina 1', NULL, 1),
+(98, 25, 1, NULL, 'literal', NULL, NULL, 'Pagina 2', NULL, 1),
+(99, 26, 1, NULL, 'literal', NULL, NULL, 'Pagina 3', NULL, 1),
+(100, 27, 1, NULL, 'literal', NULL, NULL, 'Pagina 4', NULL, 1),
+(101, 28, 1, NULL, 'literal', NULL, NULL, 'Pagina 5', NULL, 1),
+(102, 29, 1, NULL, 'literal', NULL, NULL, 'Pagina 6', NULL, 1),
+(103, 30, 1, NULL, 'literal', NULL, NULL, 'Pagina 7', NULL, 1),
+(104, 31, 1, NULL, 'literal', NULL, NULL, 'Pagina 8', NULL, 1),
+(105, 32, 1, NULL, 'literal', NULL, NULL, 'Pagina 9', NULL, 1),
+(106, 33, 1, NULL, 'literal', NULL, NULL, 'Pagina 10', NULL, 1),
+(107, 34, 1, NULL, 'literal', NULL, NULL, 'Pagina 11', NULL, 1),
+(108, 35, 1, NULL, 'literal', NULL, NULL, 'Pagina 12', NULL, 1),
+(109, 36, 1, NULL, 'literal', NULL, NULL, 'Pagina 13', NULL, 1),
+(110, 37, 1, NULL, 'literal', NULL, NULL, 'Pagina 14', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -1173,10 +1343,10 @@ CREATE TABLE `value_annotation` (
 CREATE TABLE `vocabulary` (
   `id` int(11) NOT NULL,
   `owner_id` int(11) DEFAULT NULL,
-  `namespace_uri` varchar(190) NOT NULL,
-  `prefix` varchar(190) NOT NULL,
-  `label` varchar(255) NOT NULL,
-  `comment` longtext DEFAULT NULL
+  `namespace_uri` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prefix` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -1477,7 +1647,7 @@ ALTER TABLE `property`
 -- AUTO_INCREMENT per la tabella `resource`
 --
 ALTER TABLE `resource`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT per la tabella `resource_class`
@@ -1543,7 +1713,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT per la tabella `value`
 --
 ALTER TABLE `value`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT per la tabella `vocabulary`

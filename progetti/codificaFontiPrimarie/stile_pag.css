@@ -1,0 +1,319 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{box-sizing: border-box;}
+body{margin: -30px -30px; line-height: 1.6; font-size: 1.2em; font-family: 'Montserrat', sans-serif; }
+main{
+  margin: 40px;
+  padding:20px; 
+}
+
+h1, h2, h3{font-family: 'Merriweather', serif;}
+
+li.ord_list{list-style-type: number;
+  background: lemonchiffon;
+  color:  #000;
+  margin: 5px;}
+
+/* Informazioni  titolo */
+#title{margin-top: 100px; text-align: center; padding: 20px;}
+.title{
+  font-size: 2em;
+  margin-bottom: -0.5em
+}
+
+.statua>img {
+  width: 100%; /* Larghezza del 100% rispetto al contenitore */
+  max-height: 600px; /* Altezza massima del 100% rispetto al contenitore */
+  display: block;
+  border: none;
+  margin: -30px; 
+  padding: -30px;
+ 
+}
+#informazioni > img {
+  width: 250px;
+  float: left;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+  right: 20px;
+}
+
+
+
+.card {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container {
+  flex: 0 0 auto;
+  margin: 0 5px; /* Adjust margin as needed */
+  width:30%;
+}
+.container:hover{
+  background-color: rgba(114, 186, 219, 0.892);
+
+}
+/* Descrizione */
+.descrizione{
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+ 
+}
+
+.card_descrizione h2{
+  text-align: center;
+  font-size: 1.2em;
+  background-color:rgb(96, 168, 192);
+  color: #fff;
+  border-radius: 10px;
+}
+.card_descrizione{
+  font-size: 1.0em;
+  text-align: justify;
+  
+}
+#descrizione img{
+  width: 300px;
+  float: left;
+  border-radius: 10px;
+  margin: 20px;
+  position: relative;
+
+}
+#card_descrizione{
+  font-size: 1.0em;
+  text-align: justify;
+  position: left; 
+  margin:10px;
+
+}
+#card_descrizione h2 {
+  font-size:1.2em;
+  text-align: center;
+  background-color:rgb(96, 168, 192);
+  color: #fff;
+  border-radius: 10px;
+}
+.descrizione{
+  font-size:1.0em;
+}
+
+/* Slide */
+.slide{width: 80%; position: relative; margin: 30px auto;}
+.foto{width: 500px; display: none; margin: 0 auto; text-align: center; position: relative; }
+
+
+.sezione{width: 500px; display: none; margin: 0 auto; text-align: center;}
+.show {display: block;}
+#indietro, #avanti{ position: absolute; top:50%; cursor: pointer; border-radius: 10px; transform: translateY(-50%);}
+#indietro{left:20px;}
+#avanti{right:0;}
+#avanti:hover, #indietro:hover{background-color: rgb(96, 168, 192); color: #fff;}
+#testo_foto{display:block; text-align: center;}
+
+.slide {
+  float: left;
+  width: 50%;
+  flex: 50%;
+}
+.testo {
+float: left;
+width: 40%;
+flex: 50%;
+background-color: lightblue;
+overflow: auto; /* Use 'auto' to show scroll bars only when needed */
+max-height: 600px;
+
+}
+
+.testo{
+  margin-left:30px;
+  margin-top:30px;
+}
+
+/* Clear floats after the columns */
+.documenti:after {
+  content: "";
+  clear: both;
+  display: flex;
+
+}*/
+
+/*nav bar*/
+ul.info li a:hover{
+  color: #fff;
+}
+ul.info li a{
+  font-size: 1.4em;
+}
+a:hover{
+  color: black;
+  background-color:lightblue;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+a{
+  color: rgb(60,53,53);
+  text-decoration: none;
+}
+p, li, xmp, a.Lette{
+  font-size: 1.0em;
+}
+ul.info{
+  list-style-type: none;
+}
+ul.info li{
+  padding-bottom: 1em;
+}
+li {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+.info-title{
+  font-family: "headers", Helvetica, sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+section.browsing nav{
+  float: left;
+}
+#info{
+  background-color: lightblue;
+  padding: 2em;
+  width: 80%;
+  margin: 30px;
+}
+
+
+
+/**
+span{
+  display: none;
+}
+**/
+
+span{
+  display: none;
+}
+
+
+
+#numero{
+  display: none;
+}
+
+
+
+
+
+
+
+/* Glossario */
+#glossario{margin: 100px auto; padding: 15px; width: 80%;}
+.label{background-color: rgb(96, 168, 192); color: #fff; padding: 5px; border-radius: 10px;}
+
+/* Scroll top */
+#top{text-decoration: none; color:rgb(96, 168, 192); margin: 15px;}
+
+.statua{
+  margin-bottom: 20px;
+}
+/* Footer */
+/* Aggiungi spazio tra h2 e p nel footer */
+footer.riferimenti h2 {
+  margin-bottom: 10px; /* Sostituisci 10px con la quantità di spazio desiderata */
+  display: inline-block; /* Assicura che h2 abbia una visualizzazione blocco */
+  clear: both; /* Assicura che h2 venga spostato su una nuova riga */
+}
+
+footer.riferimenti p{
+  margin-bottom: 10px; /* Sostituisci 10px con la quantità di spazio desiderata */
+  display: block; /* Assicura che h2 abbia una visualizzazione blocco */
+  clear: both; /* Assicura che h2 venga spostato su una nuova riga */
+}
+
+/* Resto degli stili per il footer */
+footer {
+  background-color: rgb(96, 168, 192); /* Sostituisci con il colore di sfondo desiderato */
+  padding: 20px; /* Aggiungi padding se necessario */
+  text-align: left; /* Aggiungi stili per il testo allineato a sinistra */
+}
+
+footer.riferimenti section {
+  /* Aggiungi stili per la sezione principale */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.0em;
+  margin-left: 30px;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+footer.riferimenti div {
+  display:block;
+  float:left;
+  margin-left:20px;
+  margin-right: 20px;
+  position:relative;
+  min-height:35px;
+  max-width:50%;
+  padding-bottom:10px;
+  text-align:left;
+}
+
+
+#logo img {
+  /* Aggiungi stili per l'immagine allineata a destra */
+  float: left; /* o usa flexbox o altre tecniche a seconda delle tue esigenze */
+  width: 150px;
+  margin-top:20px;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 1024px){
+
+    /* Header */
+    #header{flex-wrap: wrap;}
+    .navbar{width: 100%; display: none;}
+    .navbar li{display: block; width: 100%;}
+    .navbar li a{text-align: center;}
+    footer h3, footer p, .block, #hamburger{display: block;}
+    body{flex-wrap: wrap;}
+    section{flex-wrap: wrap;}
+    div{flex-wrap: wrap;}
+    /* Informazioni titolo */
+    #title{text-align: initial;}
+
+    /* Caratteristiche */
+    .descrizione, .lista_bottoni{flex-wrap: wrap;}
+    .descrizione div, .descrizione div img{width: 100%;}
+    #order_2{order: 2;}
+    #order_1{order: 1;}
+
+  .descrizione1 img{
+    width: 250px;
+    float: left;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+  }
+  .card_descrizione{
+    text-align: justify;
+    padding: 20%;
+    margin: 30%; 
+  }
+
+    /* Glossario */
+    #glossario{width: 100%;}
+
+}

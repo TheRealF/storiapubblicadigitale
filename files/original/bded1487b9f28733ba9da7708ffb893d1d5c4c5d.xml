@@ -775,7 +775,7 @@
         <facsimile xml:id="fascicolo1">
             <!--FASCICOLO 1-->
             <surface n="1" xml:id="statua1_ciano_pag1">
-                <graphic url="/files/original/ffe56d6e886ac3acb28d77d96a34cc0b08f525d5.jpeg" width='695px' height='978px' />
+                <graphic url="statua1_ciano_pag1.jpeg" width='695px' height='978px' />
                 <!--l'acronimo vuol significare UFFICIO STORICO MARINA MILITARE-->
                 <zone ulx="39" uly="25" lrx="186" lry="61" xml:id="acronimo1" />
                 <zone ulx="444" uly="15" lrx="614" lry="52" xml:id= "identificativo1" />
@@ -785,7 +785,7 @@
 
             <!--DOCUMENTO 2-->
             <surface n="2" xml:id="statua1_ciano_pag2">
-                <graphic url="/files/original/ce06edd76f7875e3993607d1411f2434a24ce6f6.jpeg" width='591px' height='842px' />
+                <graphic url="statua1_ciano_pag2.jpeg" width='591px' height='842px' />
                 <!--modulo 1831 conservato alla Maddalena in Sardegna-->
                 <zone ulx="465" uly="29" lrx="540" lry="44" xml:id="catalogo1_2" />
                 <zone ulx="353" uly="55" lrx="576" lry="76" xml:id="data1_2" />
@@ -808,7 +808,7 @@
 
             <!--DOCUMENTO 3-->
             <surface n="3" xml:id="statua1_ciano_pag3">
-                <graphic url='/files/original/2ea29063658c35a80ed3ef965f6dd2669ebaa027.jpeg' width='588.6px' height='823.6px' />
+                <graphic url='statua1_ciano_pag3.jpeg' width='588.6px' height='823.6px' />
                 <!--modulo 41-->
                 <zone ulx="487" uly="6" lrx="542" lry="25" xml:id="modulo3" />
                 <zone ulx="344" uly="36" lrx="565" lry="82" xml:id="data3" />
@@ -831,7 +831,7 @@
 
             <!--DOCUMENTO 4-->
             <surface n="4" xml:id="statua1_ciano_pag4">
-                <graphic url='/files/original/7d39fabdba6ad7cabb88d1937c8a8380bd95df6a.jpeg' width='595.6px' height='832.6px' />
+                <graphic url='statua1_ciano_pag4.jpeg' width='595.6px' height='832.6px' />
                 <!--modulo 41-->
                 <zone ulx="502" uly="16" lrx="542" lry="31" xml:id="modulo4"/>
                 <zone ulx="358" uly="48" lrx="567" lry="89" xml:id="data4"/>
@@ -854,7 +854,7 @@
 
             <!--DOCUMENTO 5-->
             <surface n="5" xml:id="statua1_ciano_pag5">
-                <graphic url='/files/original/380e36b85b7290835f4ed2924c86ee923e3f8c65.jpeg' width='584px' height='843px' />
+                <graphic url='statua1_ciano_pag5.jpeg' width='584px' height='843px' />
                 <zone ulx="339" uly="47" lrx="551" lry="81" xml:id="modulo5" />
                 <zone ulx="9" uly="29" lrx="236" lry="143" xml:id="stemma5" />
                 <zone ulx="347" uly="44" lrx="551" lry="79" xml:id="data5" />
@@ -874,7 +874,7 @@
 
             <!--DOCUMENTO 6-->
             <surface n="6" xml:id="statua1_ciano_pag6">
-                <graphic url='/files/original/e7dee11e245ccd233ea546f3f13ddec492d0ab60.jpeg' width='583px' height='841px' />
+                <graphic url='statua1_ciano_pag6.jpeg' width='583px' height='841px' />
                 <zone ulx="485" uly="15" lrx="533" lry="32" xml:id="modulo1_6" />
                 <zone ulx="354" uly="45" lrx="551" lry="77" xml:id="data1_6" />
                 <zone ulx="16" uly="32" lrx="248" lry="108" xml:id="stemma1_6" />

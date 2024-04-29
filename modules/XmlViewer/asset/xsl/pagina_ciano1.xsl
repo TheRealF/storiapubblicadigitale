@@ -17,7 +17,7 @@
 
          
                 <a class= "statua" href="index.html">
-                    <img src="img_ciano1.jpeg" />
+                    <img src="/spd/files/original/ffe56d6e886ac3acb28d77d96a34cc0b08f525d5.jpeg" />
                 </a>
                 <main>
                     <div class="card_descrizione">
@@ -39,7 +39,7 @@
                         <div class="card">
                             <div class="container">
                                 <a href="fascicolo1.html">
-                                    <img src="statua1_ciano_pag1.jpeg" alt="fascicolo1" style="width:100%" />
+                                    <img src="../../../../../files/original/ffe56d6e886ac3acb28d77d96a34cc0b08f525d5.jpeg" alt="fascicolo1" style="width:100%" />
                                     <h4><b>Fascicolo 1</b></h4> 
                                     <p>Descrizione Fascicolo 1</p> 
                                 </a>
@@ -47,7 +47,7 @@
                             
                             <div class="container">
                                 <a href="fascicolo2.html">
-                                    <img src="statua2_ciano_pag1.jpeg" alt="fascicolo2" style="width:100%" />
+                                    <img src="../../../../../files/original/187ac4401fbc74d6a0acc48479473a0888d6394e.jpeg" alt="fascicolo2" style="width:100%" />
                                     <h4><b>Fascicolo 2</b></h4> 
                                     <p>Descrizione Fascicolo 2</p> 
                                 </a>
@@ -55,7 +55,7 @@
                             
                             <div class="container">
                                 <a href="fascicolo3.html">
-                                    <img src="statua3_ciano_pag1.jpeg" alt="fascicolo3" style="width:100%" />
+                                    <img src="../../../../../files/original/9fc6850cc5ce29eac45ae5aa7966e71c78b3e2e7.jpeg" alt="fascicolo3" style="width:100%" />
                                     <h4><b>Fascicolo 3</b></h4> 
                                     <p>Descrizione Fascicolo 3</p> 
                                 </a>

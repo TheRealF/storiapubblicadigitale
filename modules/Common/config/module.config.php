@@ -16,7 +16,7 @@ return [
         ],
         'delegators' => [
             'Laminas\I18n\Translator\TranslatorInterface' => [
-                Service\Delegator\TranslatorDelegatorFactory::class,
+                __NAMESPACE__ => Service\Delegator\TranslatorDelegatorFactory::class,
             ],
         ],
     ],
@@ -30,11 +30,13 @@ return [
     ],
     'view_helpers' => [
         'invokables' => [
+            'isHomePage' => View\Helper\IsHomePage::class,
             // Required to manage PsrMessage.
             'messages' => View\Helper\Messages::class,
         ],
         'factories' => [
             'assetUrl' => Service\ViewHelper\AssetUrlFactory::class,
+            'dataType' => Service\ViewHelper\DataTypeFactory::class,
             'defaultSite' => Service\ViewHelper\DefaultSiteFactory::class,
             'easyMeta' => Service\ViewHelper\EasyMetaFactory::class,
             'matchedRouteName' => Service\ViewHelper\MatchedRouteNameFactory::class,
@@ -48,6 +50,7 @@ return [
         'invokables' => [
             Form\Element\ArrayText::class => Form\Element\ArrayText::class,
             Form\Element\DataTextarea::class => Form\Element\DataTextarea::class,
+            Form\Element\GroupTextarea::class => Form\Element\GroupTextarea::class,
             Form\Element\OptionalCheckbox::class => Form\Element\OptionalCheckbox::class,
             Form\Element\OptionalDate::class => Form\Element\OptionalDate::class,
             Form\Element\OptionalDateTime::class => Form\Element\OptionalDateTime::class,
@@ -69,6 +72,7 @@ return [
             Form\Element\MediaTypeSelect::class => Service\Form\Element\MediaTypeSelectFactory::class,
             // This element is not the same than \Omeka\Form\Element\SitePageSelect (singular site).
             Form\Element\SitesPageSelect::class => Service\Form\Element\SitesPageSelectFactory::class,
+            Form\Element\ThumbnailTypeSelect::class => Service\Form\Element\ThumbnailTypeSelectFactory::class,
             // Optional core elements.
             Form\Element\OptionalItemSetSelect::class => Service\Form\Element\OptionalItemSetSelectFactory::class,
             Form\Element\OptionalPropertySelect::class => Service\Form\Element\OptionalPropertySelectFactory::class,
@@ -85,10 +89,19 @@ return [
         ],
     ],
     'controller_plugins' => [
+        'invokables' => [
+            'sendFile' => Mvc\Controller\Plugin\SendFile::class,
+        ],
         'factories' => [
             'easyMeta' => Service\ControllerPlugin\EasyMetaFactory::class,
+            'messenger' => Mvc\Controller\Plugin\Messenger::class,
             'specifyMediaType' => Service\ControllerPlugin\SpecifyMediaTypeFactory::class,
             'translator' => Service\ControllerPlugin\TranslatorFactory::class,
+        ],
+    ],
+    'validators' => [
+        'invokables' => [
+            'readableDirectory' => Validator\ReadableDirectory::class,
         ],
     ],
     'translator' => [

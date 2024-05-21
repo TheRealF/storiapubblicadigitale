@@ -28,6 +28,7 @@ return [
         'aliases' => [
             'Omeka\File\Store' => 'Omeka\File\Store\Local',
             'Omeka\File\Thumbnailer' => 'Omeka\File\Thumbnailer\Gd',
+            'Omeka\Job\DispatchStrategy' => 'Omeka\Job\DispatchStrategy\Synchronous',
         ],
     ],
 ];

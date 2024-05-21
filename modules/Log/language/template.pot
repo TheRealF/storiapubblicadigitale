@@ -1,0 +1,336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-12 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/scripts/upgrade.php:85
+#, php-format
+msgid ""
+"Support of the third party service Sentry was moved to a separate module, "
+"%1$sLog Sentry%2$s."
+msgstr ""
+
+#: data/scripts/upgrade.php:95 Module.php:77
+#, php-format
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr ""
+
+#: Module.php:92
+msgid ""
+"Logging is not active. You should enable it in the file config/local.config."
+"php: `'log' => true`."
+msgstr ""
+
+#: Module.php:94
+msgid ""
+"You may need to update config/local.config.php to update your log settings."
+msgstr ""
+
+#: Module.php:96
+#, php-format
+msgid "See examples of config in the %sreadme%s."
+msgstr ""
+
+#: src/ColumnType/Job.php:58 view/log/admin/log/show-details.phtml:50
+msgid "Parameters"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:55
+msgid "Message contains"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:61
+#: view/log/admin/log/show-details.phtml:30
+msgid "Reference"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:67
+#: src/View/Helper/LogSearchFilters.php:72
+#: src/View/Helper/LogSearchFilters.php:78
+#: view/log/admin/log/show-details.phtml:26
+msgid "Severity"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:95
+#: view/log/admin/log/show-details.phtml:58
+msgid "Job"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:99
+msgid "Unknown job"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:35
+msgid "Logs"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:41
+msgid "Quick filter"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:76 view/log/admin/log/show-details.phtml:63
+msgid "Message"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:105
+msgid "Full log"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:155 view/log/admin/log/browse.phtml:173
+msgid "Delete logs"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:156
+msgid "Are you sure you would like to delete the selected logs?"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:158 view/log/admin/log/browse.phtml:176
+#, php-format
+msgid "%s: this action will permanently delete %s logs and cannot be undone."
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:174
+msgid "Are you sure you would like to delete all logs of this result?"
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:191
+msgid "Omeka could not find any logs, or they are saved in another place."
+msgstr ""
+
+#: view/log/admin/log/browse.phtml:203
+msgid "Search logs"
+msgstr ""
+
+#: view/log/admin/log/show-details.phtml:24
+#, php-format
+msgid "Log #%d on %s"
+msgstr ""
+
+#: view/log/admin/log/show-details.phtml:42
+#, php-format
+msgid "Job #%d"
+msgstr ""
+
+#: view/log/admin/log/show-details.phtml:44
+#, php-format
+msgid "Started at %s"
+msgstr ""
+
+#: view/log/admin/log/show-details.phtml:47
+#, php-format
+msgid "Ended at %s"
+msgstr ""
+
+#: view/omeka/admin/job/browse.phtml:30
+msgid "Id / Params"
+msgstr ""
+
+#: view/omeka/admin/job/browse.phtml:33
+msgid "Status / Log"
+msgstr ""
+
+#: view/omeka/admin/job/browse.phtml:46 view/omeka/admin/job/show.phtml:39
+msgid "[no owner]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:25
+msgid "[undefined]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:28
+msgid "[not started]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:34
+msgid "[not ended]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:57
+msgid "Progress"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:83
+msgid "[no args]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:94 view/omeka/admin/job/show.phtml:107
+msgid "[no log]"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:100
+msgid "Log (database)"
+msgstr ""
+
+#: view/omeka/admin/job/show.phtml:104
+#, php-format
+msgid "View log (%d results)"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:33
+#: src/Api/Representation/LogRepresentation.php:63
+msgid "emergency"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:34
+#: src/Api/Representation/LogRepresentation.php:64
+msgid "alert"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:35
+#: src/Api/Representation/LogRepresentation.php:65
+msgid "critical"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:37
+#: src/Api/Representation/LogRepresentation.php:67
+msgid "warning"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:38
+#: src/Api/Representation/LogRepresentation.php:68
+msgid "notice"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:39
+#: src/Api/Representation/LogRepresentation.php:69
+msgid "info"
+msgstr ""
+
+#: src/View/Helper/LogSearchFilters.php:40
+#: src/Api/Representation/LogRepresentation.php:70
+msgid "debug"
+msgstr ""
+
+#: src/Job/DispatchStrategy/Synchronous.php:48
+msgid ""
+"Fatal error: {message}\n"
+"in {file} on line {line}"
+msgstr ""
+
+#: src/Job/DispatchStrategy/Synchronous.php:76
+msgid ""
+"Warning: {message}\n"
+"in {file} on line {line}"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:28
+msgid "Emergency"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:29
+msgid "Alert"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:30
+msgid "Critical"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:33
+msgid "Notice"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:35
+msgid "Debug"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:43
+msgid "Minimum severity"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:50
+msgid "Select minimum severity…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:57
+msgid "Maximum severity"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:64
+msgid "Select maximum severity…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:76
+msgid "Set a date with optional comparator…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:88
+msgid "Set a reference…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:100
+msgid "Set a job id…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:132
+msgid "User by id"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:144
+msgid "Untranslated message"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:148 src/Form/QuickSearchForm.php:160
+msgid "Set an untranslated string…"
+msgstr ""
+
+#: src/Form/QuickSearchForm.php:156
+msgid "Not in untranslated message"
+msgstr ""
+
+#: src/ColumnType/Id.php:10 config/module.config.php:260
+msgid "Id"
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:68
+msgid ""
+"The logger is currently disabled for database. Check config/local.config.php."
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:106
+msgid "log"
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:121
+msgid "Log successfully deleted"
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:123
+#: src/Controller/Admin/LogController.php:155
+msgid "An error occured during deletion of logs"
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:144
+msgid "You must select at least one log to batch delete."
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:153
+msgid "Logs successfully deleted"
+msgstr ""
+
+#: src/Controller/Admin/LogController.php:192
+msgid ""
+"Deleting logs in background (<a href=\"{job_url}\">job #{job_id}</a>). This "
+"may take a while."
+msgstr ""
+
+#: src/Service/LoggerFactory.php:49
+msgid "[Omeka S] File logging disabled: not writeable."
+msgstr ""
+
+#: src/Service/LoggerFactory.php:59 src/Service/LoggerDbFactory.php:30
+msgid "[Omeka S] Database logging disabled: wrong config."
+msgstr ""
